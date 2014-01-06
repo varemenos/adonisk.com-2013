@@ -6,10 +6,13 @@ This is the source for the AdonisK.com tools
 
 ## CLI
 
+### Shebang
+This node.js script file contains a node.js [shebang](http://en.wikipedia.org/wiki/Shebang_(Unix)) and therefore can be executed by the terminal emulator without the need of prefixing your commands with `node`. So if you are not interested in installing the CLI tool via npm, you can still use it by calling it directly (`./cli`) (or `cli` if you've added it in your `$PATH`).
+
 ### Usage
 
 ```js
-node cli -option option-parameter
+cli -option option-parameter
 ```
 
 options:
@@ -22,7 +25,7 @@ options:
 encode a string:
 
 ```js
-node cli -e "hello world"
+cli -e "hello world"
 =>
 aGVsbG8gd29ybGQ=
 ```
@@ -30,7 +33,7 @@ aGVsbG8gd29ybGQ=
 decode a string:
 
 ```js
-node cli -d aGVsbG8gd29ybGQ=
+cli -d aGVsbG8gd29ybGQ=
 =>
 hello world
 ```
