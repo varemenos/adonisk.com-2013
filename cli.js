@@ -1,3 +1,5 @@
+// Node.js CLI code for tools.adonisk.com
+
 // get the CLI parameters
 var args = process.argv.slice();
 
