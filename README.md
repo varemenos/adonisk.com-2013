@@ -32,7 +32,6 @@ decode a string:
 ```js
 node cli -d aGVsbG8gd29ybGQ=
 =>
-
 hello world
 ```
 
