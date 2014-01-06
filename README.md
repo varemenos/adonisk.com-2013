@@ -12,7 +12,7 @@ This node.js script file contains a node.js [shebang](http://en.wikipedia.org/wi
 ### Usage
 
 ```js
-cli -option option-parameter
+cli -option [option-parameter]
 ```
 
 options:
@@ -35,6 +35,14 @@ decode a string:
 ```js
 cli -d aGVsbG8gd29ybGQ=
 =>
+hello world
+```
+
+multiple options:
+```js
+cli -e "hello world" -d aGVsbG8gd29ybGQ=
+=>
+aGVsbG8gd29ybGQ=
 hello world
 ```
 

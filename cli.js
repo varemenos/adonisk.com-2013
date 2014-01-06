@@ -80,6 +80,4 @@ for (var i = 0; i < args.length; i++) {
 			}
 		}
 	}
-
-	return 0;
 }
