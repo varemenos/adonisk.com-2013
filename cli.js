@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 // Node.js CLI code for tools.adonisk.com
 
 // get the CLI parameters
