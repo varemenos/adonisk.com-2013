@@ -24,18 +24,20 @@ encode a string:
 ```js
 node cli -e "hello world"
 ```
+
 =>
 
-```aGVsbG8gd29ybGQ=```
+	aGVsbG8gd29ybGQ=
 
 decode a string:
 
 ```js
 node cli -d aGVsbG8gd29ybGQ=
 ```
+
 =>
 
-```hello world```
+	hello world
 
 ## Credits
 
