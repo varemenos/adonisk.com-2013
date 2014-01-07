@@ -18,42 +18,8 @@ if (args.length === 2) {
 args.shift(0);
 args.shift(0);
 
-// create a new variable which contains functions for the selected option's actions
-var options = {};
-
-// base64 encoding function
-options.encoding = function (x) {
-	if (x) {
-		// if an argument was passed
-		// then base64-encode it and return the value
-		return new Buffer(x).toString('base64');
-	} else {
-		// else print error message
-		console.log('Nothing to encode. The encoding option requires a parameter');
-		// and exit
-		return -1;
-	}
-}
-
-// alias
-options.e = options.encoding;
-
-// base64 decoding function
-options.decoding = function (x) {
-	if (x) {
-		// if an argument was passed
-		// then base64-decode it and return the value
-		return (new Buffer(x, 'base64')).toString();
-	} else {
-		// else print error message
-		console.log('Nothing to decode. The decoding option requires a parameter');
-		// and exit
-		return -1;
-	}
-}
-
-// alias
-options.d = options.decoding;
+// create a new variable which contains functions from the vejstools library
+var options = require('vejstools');
 
 // loop through all the CLI arguments and process them
 for (var i = 0; i < args.length; i++) {
