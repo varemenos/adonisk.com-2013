@@ -1,3 +1,4 @@
+
 {
   "name": "tools.adonisk.com",
   "version": "0.0.0",
@@ -22,8 +23,8 @@
   "bugs": {
     "url": "https://github.com/varemenos/tools.adonisk.com/issues"
   },
-  "homepage": "https://github.com/varemenos/tools.adonisk.com",
-  "devDependencies": {
+  "homepage": "http://tools.adonisk.com",
+  "dependencies": {
     "vejstools": "0.0.0"
   }
 }

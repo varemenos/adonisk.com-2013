@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><tools.adonisk.com></title>
+		<link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/normalize/2.1.3/normalize.min.css' />
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css" />
+		<link rel='stylesheet' href='/stylesheets/style.css' />
+	</head>
+	<body>
+		<div id="wrap">
+			<ul>
+				<li><a href="#" class="current">Code Formatter</a></li>
+				<li><a href="#">Base64 Converter</a></li>
+				<li><a href="#">Unicode Converter</a></li>
+			</ul>
+
+			<div class="selection">
+				<select name="lang">
+					<option value="html">HTML</option>
+					<option value="css">CSS</option>
+					<option value="sass">SASS</option>
+					<option value="js">JavaScript</option>
+				</select>
+				<button><i class="fa fa-compress"></i><span class="desc">Minify</span></button>
+				<button><i class="fa fa-expand"></i><span class="desc">Prettify</span></button>
+			</div>
+
+			<h2>input</h2>
+			<div id="edit">&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;current&quot;&gt;Code Formatter&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Base64 Converter&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Unicode Converter&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</div>
+
+			<h2>output</h2>
+			<div id="output">&lt;ul&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;current&quot;&gt;Code Formatter&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Base64 Converter&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Unicode Converter&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</div>
+		</div>
+
+		<script src="//cdnjs.cloudflare.com/ajax/libs/ace/1.1.01/ace.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+		<script>
+			var editor = ace.edit("edit");
+			var output = ace.edit("output");
+
+			editor.getSession().setMode('ace/mode/html');
+			output.getSession().setMode('ace/mode/html');
+
+			editor.setTheme('ace/theme/tomorrow_night');
+			output.setTheme('ace/theme/tomorrow_night');
+
+			editor.setOptions({
+				theme : 'tomorrow_night',
+				tabSize : 4,
+				showPrintMargin : false,
+				wrap : true,
+				useWorker : true,
+				fontSize : 12,
+				showInvisibles : false,
+				behavioursEnabled : true,
+				enableSnippets: true,
+				enableLiveAutoComplete: true,
+				enableBasicAutocompletion: true,
+				useSoftTabs: false,
+				highlightActiveLine: false,
+				enableEmmet: true,
+				showGutter: true,
+				showFoldWidgets: true,
+				readOnly: true
+			});
+
+			output.setOptions({
+				theme : 'tomorrow_night',
+				tabSize : 4,
+				showPrintMargin : false,
+				wrap : true,
+				useWorker : true,
+				fontSize : 12,
+				showInvisibles : false,
+				behavioursEnabled : true,
+				enableSnippets: true,
+				enableLiveAutoComplete: true,
+				enableBasicAutocompletion: true,
+				useSoftTabs: false,
+				highlightActiveLine: false,
+				enableEmmet: true,
+				showGutter: true,
+				showFoldWidgets: true,
+				readOnly: true
+			});
+		</script>
+	</body>
+</html>

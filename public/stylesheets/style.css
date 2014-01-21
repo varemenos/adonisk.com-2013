@@ -1,0 +1,85 @@
+body {
+  background-color: #993333;
+}
+
+#wrap {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  list-style-position: outside;
+  list-style-image: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #862d2d;
+}
+ul:before, ul:after {
+  content: " ";
+  display: table;
+}
+ul:after {
+  clear: both;
+}
+ul > li {
+  float: left;
+}
+ul a {
+  display: block;
+  padding: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+ul a, ul a:visited {
+  color: #fff;
+}
+ul a:hover {
+  color: #222;
+}
+ul a.current {
+  text-decoration: underline;
+}
+
+.selection {
+  display: block;
+  padding: 1rem;
+  color: #fff;
+  background-color: #732626;
+}
+.selection select {
+  padding: 0.5rem;
+  color: #222;
+  background-color: #fff;
+  border: none;
+}
+.selection button {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.5rem;
+  color: #222;
+  background-color: #fff;
+  border: none;
+}
+.selection button .desc {
+  display: inline-block;
+  font-size: 0;
+  transition: font-size 200ms;
+}
+.selection button:hover .desc {
+  font-size: 1rem;
+}
+
+#edit,
+#output {
+  position: relative;
+  height: 150px;
+}
+
+h2 {
+  margin: 0;
+  padding: 1rem;
+  color: #ccc;
+  background-color: #602020;
+}
