@@ -1,0 +1,27 @@
+{
+  "name": "tools.adonisk.com",
+  "version": "0.0.0",
+  "homepage": "http://tools.adonisk.com",
+  "authors": [
+    "Adonis K. <aklp08@gmail.com>"
+  ],
+  "keywords": [
+    "vejstools",
+    "tools.adonisk.com",
+    "adonisk",
+    "varemenos"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "verepo": "~0.0.2",
+    "font-awesome": "~4.0.3"
+  }
+}

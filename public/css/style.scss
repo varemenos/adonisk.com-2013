@@ -1,0 +1,88 @@
+@import "_verepo";
+@import "_font-awesome";
+
+@include normalize;
+
+$main-color: #933;
+
+body{
+  background-color: $main-color;
+}
+
+#wrap{
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+ul{
+  @include floated-list;
+  background-color: darken($main-color, 5%);
+
+  a{
+    display: block;
+    padding: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+
+    &,
+    &:visited{
+      color: #fff;
+    }
+
+    &:hover{
+      color: #222;
+    }
+
+    &.current{
+      text-decoration: underline;
+    }
+  }
+}
+
+.selection{
+  display: block;
+  padding: 1rem;
+  color: #fff;
+  background-color: darken($main-color, 10%);
+
+  select{
+    padding: 0.5rem;
+    color: #222;
+    background-color: #fff;
+    border: none;
+  }
+
+  button{
+    display: inline-block;
+    margin-left: 0.5rem;
+    padding: 0.5rem;
+    color: #222;
+    background-color: #fff;
+    border: none;
+
+    .desc{
+      display: inline-block;
+      font-size: 0;
+      @include transition(font-size 200ms);
+    }
+
+    &:hover{
+      .desc{
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+#edit,
+#output{
+  position: relative;
+  height: 150px;
+}
+
+h2{
+  margin: 0;
+  padding: 1rem;
+  color: #ccc;
+  background-color: darken($main-color, 15%);
+}
