@@ -2,87 +2,141 @@
 @import "_font-awesome";
 
 @include normalize;
+// @include grid(12, 1rem);
 
+// $main-color: #335;
 $main-color: #933;
 
 body{
-  background-color: $main-color;
+	background-color: $main-color;
 }
 
 #wrap{
-  max-width: 1140px;
-  margin: 0 auto;
+	max-width: 1140px;
+	margin: 0 auto;
 }
 
-ul{
-  @include floated-list;
-  background-color: darken($main-color, 5%);
+header{
+	background-color: $main-color;
 
-  a{
-    display: block;
-    padding: 1rem;
-    font-weight: bold;
-    text-decoration: none;
+	nav{
+		display: inline-block;
 
-    &,
-    &:visited{
-      color: #fff;
-    }
+		ul{
+			@include inline-list;
 
-    &:hover{
-      color: #222;
-    }
+			li{
+				a{
+					display: inline-block;
+					padding: 1rem;
+					font-weight: bold;
+					transition: background 250ms ease-out;
 
-    &.current{
-      text-decoration: underline;
-    }
-  }
+					&,
+					&:visited{
+						color: white;
+						text-decoration: none;
+					}
+
+					&:hover{
+						background-color: #222;
+					}
+				}
+			}
+		}
+	}
+}
+
+#brand{
+	display: inline-block;
+	margin: 0;
+	padding: 1rem;
+	line-height: 1rem;
+	font-size: 1rem;
+	color: #222;
+}
+
+main ul{
+	@include floated-list;
+	background-color: darken($main-color, 5%);
+
+	a{
+		display: block;
+		padding: 0.75rem;
+		font-size: 0.8rem;
+		font-weight: bold;
+		text-decoration: none;
+
+		&,
+		&:visited{
+			color: #fff;
+		}
+
+		&:hover{
+			color: #222;
+		}
+
+		&.current{
+			text-decoration: underline;
+		}
+	}
 }
 
 .selection{
-  display: block;
-  padding: 1rem;
-  color: #fff;
-  background-color: darken($main-color, 10%);
+	display: block;
+	padding: 1rem;
+	color: #fff;
+	background-color: darken($main-color, 10%);
 
-  select{
-    padding: 0.5rem;
-    color: #222;
-    background-color: #fff;
-    border: none;
-  }
+	select{
+		padding: 0.5rem;
+		color: #222;
+		background-color: #fff;
+		border: none;
+	}
 
-  button{
-    display: inline-block;
-    margin-left: 0.5rem;
-    padding: 0.5rem;
-    color: #222;
-    background-color: #fff;
-    border: none;
+	button{
+		display: inline-block;
+		margin-left: 0.5rem;
+		padding: 0.5rem;
+		color: #222;
+		background-color: #fff;
+		border: none;
 
-    .desc{
-      display: inline-block;
-      font-size: 0;
-      @include transition(font-size 200ms);
-    }
+		.desc{
+			display: inline-block;
+			font-size: 0;
+			@include transition(font-size 200ms);
+		}
 
-    &:hover{
-      .desc{
-        font-size: 1rem;
-      }
-    }
-  }
+		&:hover{
+			.desc{
+				font-size: 1rem;
+			}
+		}
+	}
 }
 
 #edit,
 #output{
-  position: relative;
-  height: 150px;
+	position: relative;
+	height: 150px;
 }
 
 h2{
-  margin: 0;
-  padding: 1rem;
-  color: #ccc;
-  background-color: darken($main-color, 15%);
+	margin: 0;
+	padding: 1rem;
+	color: #ccc;
+	background-color: darken($main-color, 15%);
+}
+
+footer{
+	background-color: $main-color;
+
+	p{
+		margin: 0;
+		padding: 1rem;
+		color: white;
+		text-align: center;
+	}
 }

@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	editor.setOptions({
 		mode: 'ace/mode/html',
-		theme: 'ace/theme/tomorrow_night',
+		theme: 'ace/theme/tomorrow_night_eighties',
 		tabSize: 4,
 		showPrintMargin: false,
 		wrap: true,
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	output.setOptions({
 		mode: 'ace/mode/html',
-		theme: 'ace/theme/tomorrow_night',
+		theme: 'ace/theme/tomorrow_night_eighties',
 		tabSize: 4,
 		showPrintMargin: false,
 		wrap: true,

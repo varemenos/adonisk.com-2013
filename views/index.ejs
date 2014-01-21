@@ -5,33 +5,53 @@
 		<link rel='stylesheet' href='/css/style.css' />
 	</head>
 	<body>
-		<div id="wrap">
-			<ul>
-				<li><a href="#" class="current">Code Formatter</a></li>
-				<li><a href="#">Base64 Converter</a></li>
-				<li><a href="#">Unicode Converter</a></li>
-			</ul>
+	<div id="wrap">
+			<header>
+				<h1 id="brand">Adonis K.</h1>
+				<nav role='navigation'>
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Projects</a></li>
+						<li><a href="#">Gallery</a></li>
+						<li><a href="#">Tools</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</nav>
+			</header>
 
-			<div class="selection">
-				<select name="lang">
-					<option value="html">HTML</option>
-					<option value="css">CSS</option>
-					<option value="sass">SASS</option>
-					<option value="js">JavaScript</option>
-				</select>
-				<button><i class="fa fa-compress"></i><span class="desc">Minify</span></button>
-				<button><i class="fa fa-expand"></i><span class="desc">Prettify</span></button>
-			</div>
+			<main>
+				<ul>
+					<li><a href="#" class="current">Code Formatter</a></li>
+					<li><a href="#">Base64 Converter</a></li>
+					<li><a href="#">Unicode Converter</a></li>
+				</ul>
 
-			<h2>input</h2>
-			<div id="edit">&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;current&quot;&gt;Code Formatter&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Base64 Converter&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Unicode Converter&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</div>
+				<div class="selection">
+					<select name="lang">
+						<option value="html">HTML</option>
+						<option value="css">CSS</option>
+						<option value="sass">SASS</option>
+						<option value="js">JavaScript</option>
+					</select>
+					<button><i class="fa fa-compress"></i><span class="desc">Minify</span></button>
+					<button><i class="fa fa-expand"></i><span class="desc">Prettify</span></button>
+				</div>
 
-			<h2>output</h2>
+				<h2>input</h2>
+				<div id="edit">&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;current&quot;&gt;Code Formatter&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Base64 Converter&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Unicode Converter&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</div>
+
+				<h2>output</h2>
 			<div id="output">&lt;ul&gt;
 	&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;current&quot;&gt;Code Formatter&lt;/a&gt;&lt;/li&gt;
 	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Base64 Converter&lt;/a&gt;&lt;/li&gt;
 	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Unicode Converter&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</div>
+			</main>
+
+			<footer>
+				<p>&copy; 2014 - Adonis K.</p>
+			</footer>
 		</div>
 
 		<script src="/js/ace/ace.js"></script>

@@ -1679,7 +1679,39 @@ body {
   max-width: 1140px;
   margin: 0 auto; }
 
-ul {
+header {
+  background-color: #993333; }
+  header nav {
+    display: inline-block; }
+    header nav ul {
+      list-style: none;
+      list-style-position: outside;
+      list-style-image: none;
+      list-style-type: none;
+      margin: 0;
+      padding: 0; }
+      header nav ul > li {
+        display: inline-block; }
+      header nav ul li a {
+        display: inline-block;
+        padding: 1rem;
+        font-weight: bold;
+        transition: background 250ms ease-out; }
+        header nav ul li a, header nav ul li a:visited {
+          color: white;
+          text-decoration: none; }
+        header nav ul li a:hover {
+          background-color: #222; }
+
+#brand {
+  display: inline-block;
+  margin: 0;
+  padding: 1rem;
+  line-height: 1rem;
+  font-size: 1rem;
+  color: #222; }
+
+main ul {
   list-style: none;
   list-style-position: outside;
   list-style-image: none;
@@ -1687,23 +1719,24 @@ ul {
   margin: 0;
   padding: 0;
   background-color: #862d2d; }
-  ul:before, ul:after {
+  main ul:before, main ul:after {
     content: " ";
     display: table; }
-  ul:after {
+  main ul:after {
     clear: both; }
-  ul > li {
+  main ul > li {
     float: left; }
-  ul a {
+  main ul a {
     display: block;
-    padding: 1rem;
+    padding: 0.75rem;
+    font-size: 0.8rem;
     font-weight: bold;
     text-decoration: none; }
-    ul a, ul a:visited {
+    main ul a, main ul a:visited {
       color: #fff; }
-    ul a:hover {
+    main ul a:hover {
       color: #222; }
-    ul a.current {
+    main ul a.current {
       text-decoration: underline; }
 
 .selection {
@@ -1744,3 +1777,11 @@ h2 {
   padding: 1rem;
   color: #ccc;
   background-color: #602020; }
+
+footer {
+  background-color: #993333; }
+  footer p {
+    margin: 0;
+    padding: 1rem;
+    color: white;
+    text-align: center; }
