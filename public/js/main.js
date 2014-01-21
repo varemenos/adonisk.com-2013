@@ -5,14 +5,14 @@ document.addEventListener("DOMContentLoaded", function () {
 	editor.setOptions({
 		mode: 'ace/mode/html',
 		theme: 'ace/theme/tomorrow_night_eighties',
-		tabSize: 4,
+		tabSize: 2,
 		showPrintMargin: false,
 		wrap: true,
 		useWorker: true,
 		fontSize: 12,
 		showInvisibles: false,
 		behavioursEnabled: true,
-		useSoftTabs: false,
+		useSoftTabs: true,
 		highlightActiveLine: false,
 		showGutter: true,
 		showFoldWidgets: true,
@@ -22,17 +22,17 @@ document.addEventListener("DOMContentLoaded", function () {
 	output.setOptions({
 		mode: 'ace/mode/html',
 		theme: 'ace/theme/tomorrow_night_eighties',
-		tabSize: 4,
+		tabSize: 2,
 		showPrintMargin: false,
 		wrap: true,
 		useWorker: true,
 		fontSize: 12,
-		showInvisibles: false,
+		showInvisibles: true,
 		behavioursEnabled: true,
-		useSoftTabs: false,
+		useSoftTabs: true,
 		highlightActiveLine: false,
 		showGutter: true,
 		showFoldWidgets: true,
-		readOnly: true
+		readOnly: false
 	});
 });

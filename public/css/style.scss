@@ -38,6 +38,7 @@ header{
 						text-decoration: none;
 					}
 
+					&.active,
 					&:hover{
 						background-color: #222;
 					}
@@ -56,33 +57,38 @@ header{
 	color: #222;
 }
 
-main ul{
-	@include floated-list;
-	background-color: darken($main-color, 5%);
+main{
+	@include clearfix;
 
-	a{
-		display: block;
-		padding: 0.75rem;
-		font-size: 0.8rem;
-		font-weight: bold;
-		text-decoration: none;
+	ul{
+		@include floated-list;
+		background-color: darken($main-color, 5%);
 
-		&,
-		&:visited{
-			color: #fff;
-		}
+		a{
+			display: block;
+			padding: 0.75rem;
+			font-size: 0.8rem;
+			font-weight: bold;
+			text-decoration: none;
 
-		&:hover{
-			color: #222;
-		}
+			&,
+			&:visited{
+				color: #fff;
+			}
 
-		&.current{
-			text-decoration: underline;
+			&:hover{
+				color: #222;
+			}
+
+			&.current{
+				text-decoration: underline;
+			}
 		}
 	}
 }
 
-.selection{
+#selection,
+#settings{
 	display: block;
 	padding: 1rem;
 	color: #fff;
@@ -102,32 +108,39 @@ main ul{
 		color: #222;
 		background-color: #fff;
 		border: none;
-
-		.desc{
-			display: inline-block;
-			font-size: 0;
-			@include transition(font-size 200ms);
-		}
+		transition: background 250ms ease-out;
 
 		&:hover{
-			.desc{
-				font-size: 1rem;
-			}
+			color: #fff;
+			background-color: #222;
 		}
 	}
 }
 
-#edit,
-#output{
+.editor{
+	@include borderbox;
 	position: relative;
-	height: 150px;
+	float: left;
+	width: 50%;
+	padding: 1rem;
+	background-color: darken($main-color, 15%);
+
+	#edit,
+	#output{
+		height: 350px;
+	}
+
+	&#inputEditor{
+		border-right: 1px solid darken($main-color, 20%);
+	}
 }
 
-h2{
+.editorTitle{
 	margin: 0;
-	padding: 1rem;
+	padding: 0 0 1rem 0;
+	font-weight: bold;
+	// font-variant: small-caps;
 	color: #ccc;
-	background-color: darken($main-color, 15%);
 }
 
 footer{

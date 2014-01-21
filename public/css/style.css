@@ -1700,7 +1700,7 @@ header {
         header nav ul li a, header nav ul li a:visited {
           color: white;
           text-decoration: none; }
-        header nav ul li a:hover {
+        header nav ul li a.active, header nav ul li a:hover {
           background-color: #222; }
 
 #brand {
@@ -1711,6 +1711,11 @@ header {
   font-size: 1rem;
   color: #222; }
 
+main:before, main:after {
+  content: " ";
+  display: table; }
+main:after {
+  clear: both; }
 main ul {
   list-style: none;
   list-style-position: outside;
@@ -1739,44 +1744,53 @@ main ul {
     main ul a.current {
       text-decoration: underline; }
 
-.selection {
+#selection,
+#settings {
   display: block;
   padding: 1rem;
   color: #fff;
   background-color: #732626; }
-  .selection select {
+  #selection select,
+  #settings select {
     padding: 0.5rem;
     color: #222;
     background-color: #fff;
     border: none; }
-  .selection button {
+  #selection button,
+  #settings button {
     display: inline-block;
     margin-left: 0.5rem;
     padding: 0.5rem;
     color: #222;
     background-color: #fff;
-    border: none; }
-    .selection button .desc {
-      display: inline-block;
-      font-size: 0;
-      -webkit-transition: font-size 200ms;
-      -moz-transition: font-size 200ms;
-      -o-transition: font-size 200ms;
-      -ms-transition: font-size 200ms;
-      transition: font-size 200ms; }
-    .selection button:hover .desc {
-      font-size: 1rem; }
+    border: none;
+    transition: background 250ms ease-out; }
+    #selection button:hover,
+    #settings button:hover {
+      color: #fff;
+      background-color: #222; }
 
-#edit,
-#output {
+.editor {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
   position: relative;
-  height: 150px; }
-
-h2 {
-  margin: 0;
+  float: left;
+  width: 50%;
   padding: 1rem;
-  color: #ccc;
   background-color: #602020; }
+  .editor #edit,
+  .editor #output {
+    height: 350px; }
+  .editor#inputEditor {
+    border-right: 1px solid #4d1919; }
+
+.editorTitle {
+  margin: 0;
+  padding: 0 0 1rem 0;
+  font-weight: bold;
+  color: #ccc; }
 
 footer {
   background-color: #993333; }
