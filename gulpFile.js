@@ -1,0 +1,21 @@
+var gulp = require('gulp');
+var git = require('gulp-git');
+var bump = require('gulp-bump');
+var size = require('gulp-size');
+var exec = require('gulp-exec');
+var clean = require('gulp-clean');
+var watch = require('gulp-watch');
+var w3cjs = require('gulp-w3cjs');
+var uncss = require('gulp-uncss');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
+var jshint = require('gulp-jshint');
+var marked = require('gulp-marked');
+var nodemon = require('gulp-nodemon');
+var symlink = require('gulp-symlink');
+var htmlmin = require('gulp-htmlmin');
+var filesize = require('gulp-filesize');
+var livereload = require('gulp-livereload');
+var autoprefixer = require('gulp-autoprefixer');
+
+gulp.task('default', function () { });
