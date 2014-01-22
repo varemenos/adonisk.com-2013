@@ -1695,21 +1695,29 @@ header {
       header nav ul li a {
         display: inline-block;
         padding: 1rem;
+        line-height: 1rem;
         font-weight: bold;
         transition: background 250ms ease-out; }
         header nav ul li a, header nav ul li a:visited {
           color: white;
           text-decoration: none; }
         header nav ul li a.active, header nav ul li a:hover {
-          background-color: #222; }
+          background-color: #862d2d; }
 
 #brand {
+  display: none; }
+
+#brand-image {
   display: inline-block;
-  margin: 0;
-  padding: 1rem;
+  height: 3rem;
+  width: 3rem;
+  vertical-align: bottom;
   line-height: 1rem;
-  font-size: 1rem;
-  color: #222; }
+  background-color: #333;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-image: url("http://i.imgur.com/oY2ctw0.png"); }
 
 main:before, main:after {
   content: " ";
@@ -1742,14 +1750,18 @@ main ul {
     main ul a:hover {
       color: #222; }
     main ul a.current {
-      text-decoration: underline; }
+      background-color: #732626; }
 
 #selection,
 #settings {
-  display: block;
+  display: none;
   padding: 1rem;
+  font-size: 0.8rem;
   color: #fff;
   background-color: #732626; }
+  #selection.active,
+  #settings.active {
+    display: block; }
   #selection select,
   #settings select {
     padding: 0.5rem;
@@ -1779,12 +1791,13 @@ main ul {
   float: left;
   width: 50%;
   padding: 1rem;
-  background-color: #602020; }
+  background-color: #732626;
+  border-top: 1px solid #602020; }
   .editor #edit,
   .editor #output {
     height: 350px; }
   .editor#inputEditor {
-    border-right: 1px solid #4d1919; }
+    border-right: 1px solid #602020; }
 
 .editorTitle {
   margin: 0;
