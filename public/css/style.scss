@@ -139,7 +139,7 @@ main{
 	width: 50%;
 	padding: 1rem;
 	background-color: darken($main-color, 10%);
-	border-top: 1px solid darken($main-color, 15%);
+	border-top: 1px solid darken($main-color, 12.5%);
 
 	#edit,
 	#output{
@@ -147,15 +147,16 @@ main{
 	}
 
 	&#inputEditor{
-		border-right: 1px solid darken($main-color, 15%);
+		border-right: 1px solid darken($main-color, 12.5%);
 	}
 }
 
 .editorTitle{
 	margin: 0;
 	padding: 0 0 1rem 0;
+	line-height: 1rem;
 	font-weight: bold;
-	// font-variant: small-caps;
+	font-size: 1rem;
 	color: #ccc;
 }
 

@@ -1792,17 +1792,19 @@ main ul {
   width: 50%;
   padding: 1rem;
   background-color: #732626;
-  border-top: 1px solid #602020; }
+  border-top: 1px solid #692323; }
   .editor #edit,
   .editor #output {
     height: 350px; }
   .editor#inputEditor {
-    border-right: 1px solid #602020; }
+    border-right: 1px solid #692323; }
 
 .editorTitle {
   margin: 0;
   padding: 0 0 1rem 0;
+  line-height: 1rem;
   font-weight: bold;
+  font-size: 1rem;
   color: #ccc; }
 
 footer {
