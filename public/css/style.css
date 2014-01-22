@@ -1697,11 +1697,16 @@ header {
         padding: 1rem;
         line-height: 1rem;
         font-weight: bold;
-        transition: background 250ms ease-out; }
+        outline: none;
+        transition: background 250ms ease-out, color 250ms ease-out; }
         header nav ul li a, header nav ul li a:visited {
-          color: white;
+          color: #fff;
           text-decoration: none; }
-        header nav ul li a.active, header nav ul li a:hover {
+        header nav ul li a.active {
+          color: #fff;
+          background-color: #862d2d; }
+        header nav ul li a:hover {
+          color: #f96;
           background-color: #862d2d; }
 
 #brand {
@@ -1744,11 +1749,13 @@ main ul {
     padding: 0.75rem;
     font-size: 0.8rem;
     font-weight: bold;
-    text-decoration: none; }
+    text-decoration: none;
+    outline: none;
+    transition: color 200ms; }
     main ul a, main ul a:visited {
       color: #fff; }
     main ul a:hover {
-      color: #222; }
+      color: #f96; }
     main ul a.current {
       background-color: #732626; }
 
@@ -1766,6 +1773,8 @@ main ul {
   #settings select {
     padding: 0.5rem;
     color: #222;
+    outline: none;
+    color: #222;
     background-color: #fff;
     border: none; }
   #selection button,
@@ -1773,14 +1782,23 @@ main ul {
     display: inline-block;
     margin-left: 0.5rem;
     padding: 0.5rem;
+    outline: none;
     color: #222;
     background-color: #fff;
     border: none;
-    transition: background 250ms ease-out; }
+    border-bottom: 2px solid #777;
+    transition: background-image 250ms ease-out; }
     #selection button:hover,
     #settings button:hover {
-      color: #fff;
-      background-color: #222; }
+      border-bottom-width: 0;
+      -webkit-transform: translateY(1px);
+      -ms-transform: translateY(1px);
+      transform: translateY(1px); }
+    #selection button:active,
+    #settings button:active {
+      -webkit-transform: translateY(2px);
+      -ms-transform: translateY(2px);
+      transform: translateY(2px); }
 
 .editor {
   -webkit-box-sizing: border-box;
