@@ -1,10 +1,5 @@
-
-/**
- * Module dependencies.
- */
-
-var express = require('express');
 var routes = require('./routes');
+var express = require('express');
 var http = require('http');
 var path = require('path');
 
@@ -28,6 +23,9 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+app.get('/unicode', routes.unicode);
+app.get('/formatter', routes.formatter);
+app.get('/base64', routes.base64);
 app.get('/', routes.index);
 
 http.createServer(app).listen(app.get('port'), function(){
