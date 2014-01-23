@@ -23,9 +23,11 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/unicode', routes.unicode);
 app.get('/formatter', routes.formatter);
+app.get('/prefixer', routes.prefixer);
 app.get('/base64', routes.base64);
+app.get('/unicode', routes.unicode);
+app.get('/url', routes.url);
 app.get('/', routes.index);
 
 http.createServer(app).listen(app.get('port'), function(){
