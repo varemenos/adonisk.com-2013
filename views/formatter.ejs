@@ -1,27 +1,28 @@
 <%- include header %>
 				<div id="selection" class="active">
-					<select name="lang">
-						<option value="html">HTML</option>
-						<option value="css">CSS</option>
-						<option value="sass">SASS</option>
-						<option value="js">JavaScript</option>
-					</select>
-					<button><i class="fa fa-cog"></i>&nbsp;Settings</button>
-					<button><i class="fa fa-compress"></i>&nbsp;Minify</button>
-					<button><i class="fa fa-expand"></i>&nbsp;Prettify</button>
+					<label>
+						<select name="lang">
+							<option value="html">HTML</option>
+							<option value="css">CSS</option>
+							<option value="scss">SCSS</option>
+							<option value="javascript">JavaScript</option>
+						</select>
+					</label>
+					<button id="action-settings"><i class="fa fa-cog"></i>&nbsp;Settings</button>
+					<button id="action-minify"><i class="fa fa-compress"></i>&nbsp;Minify</button>
+					<button id="action-prettify"><i class="fa fa-expand"></i>&nbsp;Prettify</button>
 				</div>
 
 				<div id="settings">
 					<label>
-						Use Spaces:
-						<input type="checkbox" checked>
+						Use Spaces
+						<input id="action-spaces" type="checkbox" checked>
 					</label>
 					<label>
-						Tab Size:
 						<select name="tabs">
-							<option value="2">2</option>
-							<option value="4">4</option>
-							<option value="8">8</option>
+							<option value="2">Tab Size: 2px</option>
+							<option value="4">Tab Size: 4px</option>
+							<option value="8">Tab Size: 8px</option>
 						</select>
 					</label>
 				</div>
@@ -47,6 +48,6 @@
 		</div>
 
 		<script src="/js/ace/ace.js"></script>
-		<script src="/js/main.js"></script>
+		<script src="/js/formatter.js"></script>
 	</body>
 </html>

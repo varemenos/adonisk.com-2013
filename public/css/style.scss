@@ -5,6 +5,8 @@
 // @include grid(12, 1rem);
 
 // $main-color: #335;
+// $main-color: #333;
+// $main-color: #58a;
 $main-color: #933;
 
 body{
@@ -18,64 +20,44 @@ body{
 
 header{
 	background-color: $main-color;
+}
 
-	nav{
-		display: inline-block;
+#navigation{
+	display: inline-block;
 
-		ul{
-			@include inline-list;
+	ul{
+		@include inline-list;
 
-			li{
-				a{
-					display: inline-block;
-					padding: 1rem;
-					line-height: 1rem;
-					font-weight: bold;
-					outline: none;
-					transition: background 250ms ease-out, color 250ms ease-out;
+		li{
+			a{
+				display: inline-block;
+				padding: 1rem;
+				line-height: 1rem;
+				font-weight: bold;
+				outline: none;
+				transition: background 250ms ease-out, color 250ms ease-out;
 
-					&,
-					&:visited{
-						color: #fff;
-						text-decoration: none;
-					}
+				&,
+				&:visited{
+					color: #fff;
+					text-decoration: none;
+				}
 
-					&.active{
-						color: #fff;
-						background-color: darken($main-color, 5%);
-					}
+				&.active{
+					color: #fff;
+					background-color: darken($main-color, 5%);
+				}
 
-					&:hover{
-						color: #f96;
-						background-color: darken($main-color, 5%);
-					}
+				&:hover{
+					color: #f96;
+					background-color: darken($main-color, 5%);
 				}
 			}
 		}
 	}
 }
 
-#brand{
-	display: none;
-}
-
-#brand-image{
-	display: inline-block;
-	height: 3rem;
-	width: 3rem;
-	vertical-align: bottom;
-	line-height: 1rem;
-	background-color: #333;
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	background-image: url("http://i.imgur.com/oY2ctw0.png");
-
-}
-
-main{
-	@include clearfix;
-
+#sub-navigation{
 	ul{
 		@include floated-list;
 		background-color: darken($main-color, 5%);
@@ -105,6 +87,32 @@ main{
 	}
 }
 
+#brand{
+	display: none;
+}
+
+#brand-image{
+	display: inline-block;
+	height: 3rem;
+	width: 3rem;
+	vertical-align: bottom;
+	line-height: 1rem;
+	background-color: #333;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-image: url("http://i.imgur.com/oY2ctw0.png");
+
+}
+
+main{
+	@include clearfix;
+}
+
+#settings{
+	border-top: 1px solid darken($main-color, 12.5%);
+}
+
 #selection,
 #settings{
 	display: none;
@@ -117,8 +125,17 @@ main{
 		display: block;
 	}
 
-	select{
+	label{
+		display: inline-block;
 		padding: 0.5rem;
+		color: #222;
+		outline: none;
+		color: #222;
+		background-color: #fff;
+		border: none;
+	}
+
+	select{
 		color: #222;
 		outline: none;
 		color: #222;
