@@ -1682,8 +1682,24 @@ body {
 header {
   background-color: #993333; }
 
+#brand {
+  display: none; }
+
+#brand-image {
+  float: left;
+  display: block;
+  height: 3rem;
+  width: 3rem;
+  vertical-align: bottom;
+  line-height: 1rem;
+  background-color: #333;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-image: url("http://i.imgur.com/oY2ctw0.png"); }
+
 #navigation {
-  display: inline-block; }
+  display: block; }
   #navigation ul {
     list-style: none;
     list-style-position: outside;
@@ -1691,10 +1707,15 @@ header {
     list-style-type: none;
     margin: 0;
     padding: 0; }
+    #navigation ul:before, #navigation ul:after {
+      content: " ";
+      display: table; }
+    #navigation ul:after {
+      clear: both; }
     #navigation ul > li {
-      display: inline-block; }
+      float: left; }
     #navigation ul li a {
-      display: inline-block;
+      display: block;
       padding: 1rem;
       line-height: 1rem;
       font-weight: bold;
@@ -1732,28 +1753,14 @@ header {
     font-weight: bold;
     text-decoration: none;
     outline: none;
-    transition: color 200ms; }
+    transition: background 250ms ease-out, color 250ms ease-out; }
     #sub-navigation ul a, #sub-navigation ul a:visited {
       color: #fff; }
     #sub-navigation ul a:hover {
-      color: #f96; }
+      color: #f96;
+      background-color: #732626; }
     #sub-navigation ul a.current {
       background-color: #732626; }
-
-#brand {
-  display: none; }
-
-#brand-image {
-  display: inline-block;
-  height: 3rem;
-  width: 3rem;
-  vertical-align: bottom;
-  line-height: 1rem;
-  background-color: #333;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-image: url("http://i.imgur.com/oY2ctw0.png"); }
 
 main:before, main:after {
   content: " ";
@@ -1761,16 +1768,14 @@ main:before, main:after {
 main:after {
   clear: both; }
 
-#settings {
-  border-top: 1px solid #692323; }
-
 #selection,
 #settings {
   display: none;
   padding: 1rem;
   font-size: 0.8rem;
   color: #fff;
-  background-color: #732626; }
+  background-color: #732626;
+  border-top: 1px solid #692323; }
   #selection.active,
   #settings.active {
     display: block; }

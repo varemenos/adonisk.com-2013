@@ -22,15 +22,33 @@ header{
 	background-color: $main-color;
 }
 
+#brand{
+	display: none;
+}
+
+#brand-image{
+	float: left;
+	display: block;
+	height: 3rem;
+	width: 3rem;
+	vertical-align: bottom;
+	line-height: 1rem;
+	background-color: #333;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-image: url("http://i.imgur.com/oY2ctw0.png");
+}
+
 #navigation{
-	display: inline-block;
+	display: block;
 
 	ul{
-		@include inline-list;
+		@include floated-list;
 
 		li{
 			a{
-				display: inline-block;
+				display: block;
 				padding: 1rem;
 				line-height: 1rem;
 				font-weight: bold;
@@ -69,7 +87,7 @@ header{
 			font-weight: bold;
 			text-decoration: none;
 			outline: none;
-			transition: color 200ms;
+			transition: background 250ms ease-out, color 250ms ease-out;
 
 			&,
 			&:visited{
@@ -78,6 +96,7 @@ header{
 
 			&:hover{
 				color: #f96;
+				background-color: darken($main-color, 10%);
 			}
 
 			&.current{
@@ -87,30 +106,8 @@ header{
 	}
 }
 
-#brand{
-	display: none;
-}
-
-#brand-image{
-	display: inline-block;
-	height: 3rem;
-	width: 3rem;
-	vertical-align: bottom;
-	line-height: 1rem;
-	background-color: #333;
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	background-image: url("http://i.imgur.com/oY2ctw0.png");
-
-}
-
 main{
 	@include clearfix;
-}
-
-#settings{
-	border-top: 1px solid darken($main-color, 12.5%);
 }
 
 #selection,
@@ -120,6 +117,7 @@ main{
 	font-size: 0.8rem;
 	color: #fff;
 	background-color: darken($main-color, 10%);
+	border-top: 1px solid darken($main-color, 12.5%);
 
 	&.active{
 		display: block;
