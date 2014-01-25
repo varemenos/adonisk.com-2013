@@ -28,6 +28,7 @@ app.get('/prefixer', routes.prefixer);
 app.get('/base64', routes.base64);
 app.get('/unicode', routes.unicode);
 app.get('/url', routes.url);
+app.get('/color', routes.color);
 app.get('/', routes.index);
 
 http.createServer(app).listen(app.get('port'), function(){
