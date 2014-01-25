@@ -23,12 +23,13 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/formatter', routes.formatter);
-app.get('/prefixer', routes.prefixer);
-app.get('/base64', routes.base64);
-app.get('/unicode', routes.unicode);
-app.get('/url', routes.url);
-app.get('/color', routes.color);
+app.get('/tools/formatter', routes.tools.formatter);
+app.get('/tools/prefixer', routes.tools.prefixer);
+app.get('/tools/base64', routes.tools.base64);
+app.get('/tools/unicode', routes.tools.unicode);
+app.get('/tools/url', routes.tools.url);
+app.get('/tools/color', routes.tools.color);
+app.get('/tools', routes.tools.index);
 app.get('/', routes.index);
 
 http.createServer(app).listen(app.get('port'), function(){

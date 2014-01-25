@@ -1,27 +1,33 @@
 exports.index = function(req, res){
-  res.render('index', {title: 'Adonis K. > Tools'});
+	res.render('index', {title: 'Adonis K.'});
 };
 
-exports.formatter = function(req, res){
-  res.render('formatter', {title: 'Adonis K. > Code Formatter'});
+exports.tools = {};
+
+exports.tools.index = function(req, res){
+	res.render('tools/index', {title: 'Adonis K. > Tools'});
 };
 
-exports.prefixer = function(req, res){
-  res.render('prefixer', {title: 'Adonis K. > CSS Prefixer'});
-};
+	exports.tools.formatter = function(req, res){
+		res.render('tools/formatter', {title: 'Adonis K. > Code Formatter'});
+	};
 
-exports.base64 = function(req, res){
-  res.render('base64', {title: 'Adonis K. > Base64 Coder'});
-};
+	exports.tools.prefixer = function(req, res){
+		res.render('tools/prefixer', {title: 'Adonis K. > CSS Prefixer'});
+	};
 
-exports.unicode = function(req, res){
-  res.render('unicode', {title: 'Adonis K. > Unicode Coder'});
-};
+	exports.tools.base64 = function(req, res){
+		res.render('tools/base64', {title: 'Adonis K. > Base64 Coder'});
+	};
 
-exports.url = function(req, res){
-  res.render('url', {title: 'Adonis K. > Url Coder'});
-};
+	exports.tools.unicode = function(req, res){
+		res.render('tools/unicode', {title: 'Adonis K. > Unicode Coder'});
+	};
 
-exports.color = function(req, res){
-  res.render('color', {title: 'Adonis K. > Color Tool'});
-};
+	exports.tools.url = function(req, res){
+		res.render('tools/url', {title: 'Adonis K. > Url Coder'});
+	};
+
+	exports.tools.color = function(req, res){
+		res.render('tools/color', {title: 'Adonis K. > Color Tool'});
+	};
