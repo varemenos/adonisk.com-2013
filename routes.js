@@ -21,3 +21,7 @@ exports.unicode = function(req, res){
 exports.url = function(req, res){
   res.render('url', {title: 'Adonis K. > Url Coder'});
 };
+
+exports.color = function(req, res){
+  res.render('color', {title: 'Adonis K. > Color Tool'});
+};
