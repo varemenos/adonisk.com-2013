@@ -1767,6 +1767,38 @@ main:before, main:after {
   display: table; }
 main:after {
   clear: both; }
+main#page {
+  padding: 0 1rem;
+  background-color: #fff; }
+  main#page h2 {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #fff;
+    padding-right: 0.5rem;
+    border: 1px solid #eee;
+    transition: border-color 250ms; }
+    main#page h2:hover {
+      border-color: #ddd; }
+      main#page h2:hover .section-anchor {
+        background-color: #ddd; }
+  main#page .section-anchor {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    margin-right: 1rem;
+    padding: 0.5em;
+    text-decoration: none;
+    background-color: #eee;
+    transition: background-color 250ms; }
+    main#page .section-anchor, main#page .section-anchor:visited {
+      color: #222;
+      background-color: #eee; }
+  main#page :target {
+    text-decoration: underline; }
 
 #selection,
 #settings {

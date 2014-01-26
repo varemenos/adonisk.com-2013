@@ -2,6 +2,12 @@ exports.index = function(req, res){
 	res.render('index', {title: 'Adonis K.'});
 };
 
+exports.about = {};
+
+exports.about.index = function(req, res){
+	res.render('about/index', {title: 'Adonis K. > About'});
+};
+
 exports.tools = {};
 
 exports.tools.index = function(req, res){

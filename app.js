@@ -30,6 +30,9 @@ app.get('/tools/unicode', routes.tools.unicode);
 app.get('/tools/url', routes.tools.url);
 app.get('/tools/color', routes.tools.color);
 app.get('/tools', routes.tools.index);
+
+app.get('/about', routes.about.index);
+
 app.get('/', routes.index);
 
 http.createServer(app).listen(app.get('port'), function(){

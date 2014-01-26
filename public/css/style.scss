@@ -108,6 +108,47 @@ header{
 
 main{
 	@include clearfix;
+
+	&#page{
+		padding: 0 1rem;
+		background-color: #fff;
+
+		h2{
+			@include borderbox;
+			background: #fff;
+			padding-right: 0.5rem;
+			border: 1px solid #eee;
+			transition: border-color 250ms;
+
+			&:hover{
+				border-color: #ddd;
+
+				.section-anchor{
+					background-color: #ddd;
+				}
+			}
+		}
+
+		.section-anchor{
+			@include borderbox;
+			display: inline-block;
+			margin-right: 1rem;
+			padding: 0.5em;
+			text-decoration: none;
+			background-color: #eee;
+			transition: background-color 250ms;
+
+			&,
+			&:visited{
+				color: #222;
+				background-color: #eee;
+			}
+		}
+
+		:target{
+			text-decoration: underline;
+		}
+	}
 }
 
 #selection,
