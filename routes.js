@@ -2,10 +2,16 @@ exports.index = function(req, res){
 	res.render('index', {title: 'Adonis K.'});
 };
 
-exports.about = {};
+exports.projects = {};
 
-exports.about.index = function(req, res){
-	res.render('about/index', {title: 'Adonis K. > About'});
+exports.projects.index = function(req, res){
+	res.render('projects/index', {title: 'Adonis K. > Projects'});
+};
+
+exports.gallery = {};
+
+exports.gallery.index = function(req, res){
+	res.render('gallery/index', {title: 'Adonis K. > Gallery'});
 };
 
 exports.tools = {};
@@ -37,3 +43,15 @@ exports.tools.index = function(req, res){
 	exports.tools.color = function(req, res){
 		res.render('tools/color', {title: 'Adonis K. > Color Tool'});
 	};
+
+exports.about = {};
+
+exports.about.index = function(req, res){
+	res.render('about/index', {title: 'Adonis K. > About'});
+};
+
+exports.contact = {};
+
+exports.contact.index = function(req, res){
+	res.render('contact/index', {title: 'Adonis K. > Contact'});
+};

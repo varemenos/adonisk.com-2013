@@ -109,7 +109,7 @@ header{
 main{
 	@include clearfix;
 
-	&#page{
+	&#about{
 		padding: 0 1rem;
 		background-color: #fff;
 
@@ -147,6 +147,11 @@ main{
 
 		:target{
 			text-decoration: underline;
+		}
+
+		p{
+			text-indent: 1.5rem;
+			text-align: justify;
 		}
 	}
 }

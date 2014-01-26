@@ -1767,10 +1767,10 @@ main:before, main:after {
   display: table; }
 main:after {
   clear: both; }
-main#page {
+main#about {
   padding: 0 1rem;
   background-color: #fff; }
-  main#page h2 {
+  main#about h2 {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
@@ -1779,11 +1779,11 @@ main#page {
     padding-right: 0.5rem;
     border: 1px solid #eee;
     transition: border-color 250ms; }
-    main#page h2:hover {
+    main#about h2:hover {
       border-color: #ddd; }
-      main#page h2:hover .section-anchor {
+      main#about h2:hover .section-anchor {
         background-color: #ddd; }
-  main#page .section-anchor {
+  main#about .section-anchor {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
@@ -1794,11 +1794,14 @@ main#page {
     text-decoration: none;
     background-color: #eee;
     transition: background-color 250ms; }
-    main#page .section-anchor, main#page .section-anchor:visited {
+    main#about .section-anchor, main#about .section-anchor:visited {
       color: #222;
       background-color: #eee; }
-  main#page :target {
+  main#about :target {
     text-decoration: underline; }
+  main#about p {
+    text-indent: 1.5rem;
+    text-align: justify; }
 
 #selection,
 #settings {

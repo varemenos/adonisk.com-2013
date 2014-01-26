@@ -23,6 +23,10 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+app.get('/projects', routes.projects.index);
+
+app.get('/gallery', routes.gallery.index);
+
 app.get('/tools/formatter', routes.tools.formatter);
 app.get('/tools/prefixer', routes.tools.prefixer);
 app.get('/tools/base64', routes.tools.base64);
@@ -32,6 +36,8 @@ app.get('/tools/color', routes.tools.color);
 app.get('/tools', routes.tools.index);
 
 app.get('/about', routes.about.index);
+
+app.get('/contact', routes.contact.index);
 
 app.get('/', routes.index);
 
