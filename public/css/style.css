@@ -1799,7 +1799,12 @@ main#about {
       background-color: #eee; }
   main#about :target {
     text-decoration: underline; }
+  main#about ul li a, main#about ul li a:visited {
+    text-decoration: underline;
+    color: #222; }
   main#about p {
+    font-family: Myriad Pro, Arial, Helvetica, Calibri, sans-serif;
+    line-height: 1.618em;
     text-indent: 1.5rem;
     text-align: justify; }
 

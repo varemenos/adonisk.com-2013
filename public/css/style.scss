@@ -149,7 +149,17 @@ main{
 			text-decoration: underline;
 		}
 
+		ul li a{
+			&,
+			&:visited{
+				text-decoration: underline;
+				color: #222;
+			}
+		}
+
 		p{
+			font-family: Myriad Pro, Arial, Helvetica, Calibri, sans-serif;
+			line-height: 1.618em;
 			text-indent: 1.5rem;
 			text-align: justify;
 		}
