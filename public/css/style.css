@@ -1770,15 +1770,26 @@ main:after {
 main#about {
   padding: 0 1rem;
   background-color: #fff; }
+  main#about > div {
+    margin-bottom: 1rem;
+    padding: 1rem 1rem 0 1rem;
+    background-color: #fff;
+    border: 1px solid #eee;
+    transition: background-color 250ms; }
+    main#about > div:target {
+      background-color: #fec;
+      border-color: #ec9; }
+      main#about > div:target h2 {
+        border-color: #ec9; }
+        main#about > div:target h2 .section-anchor {
+          background-color: #ec9; }
   main#about h2 {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
-    background: #fff;
-    padding-right: 0.5rem;
-    border: 1px solid #eee;
-    transition: border-color 250ms; }
+    margin: 0;
+    border-bottom: 1px solid #eee; }
     main#about h2:hover {
       border-color: #ddd; }
       main#about h2:hover .section-anchor {
@@ -1792,16 +1803,15 @@ main#about {
     margin-right: 1rem;
     padding: 0.5em;
     text-decoration: none;
-    background-color: #eee;
     transition: background-color 250ms; }
     main#about .section-anchor, main#about .section-anchor:visited {
       color: #222;
       background-color: #eee; }
-  main#about :target {
-    text-decoration: underline; }
-  main#about ul li a, main#about ul li a:visited {
-    text-decoration: underline;
-    color: #222; }
+  main#about ul {
+    padding-left: 1.5rem; }
+    main#about ul li a, main#about ul li a:visited {
+      text-decoration: underline;
+      color: #222; }
   main#about p {
     font-family: Myriad Pro, Arial, Helvetica, Calibri, sans-serif;
     line-height: 1.618em;
