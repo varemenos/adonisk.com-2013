@@ -11,6 +11,8 @@ $main-color: #933;
 
 body{
 	background-color: $main-color;
+	overflow-x: auto;
+	overflow-y: scroll;
 }
 
 #wrap{
