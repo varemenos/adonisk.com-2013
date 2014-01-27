@@ -2,19 +2,19 @@ document.addEventListener('DOMContentLoaded', function () {
 	var editor = ace.edit('edit');
 	var output = ace.edit('output');
 
-	editor.setValue('<ul><li><a href="#" class="current">Code Formatter</a></li><li><a href="#">Base64 Converter</a></li><li><a href="#">Unicode Converter</a></li></ul>');
-	output.setValue('<ul>\n  <li><a href="#" class="current">Code Formatter</a></li>\n  <li><a href="#">Base64 Converter</a></li>\n  <li><a href="#">Unicode Converter</a></li>\n</ul>');
+	editor.setValue('a{\n  display: flex;\n}');
+	output.setValue('a{\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n}');
 
 	editor.clearSelection();
 	output.clearSelection();
 
 	editor.setOptions({
-		mode: 'ace/mode/html',
+		mode: 'ace/mode/css',
 		theme: 'ace/theme/tomorrow_night_eighties',
 		tabSize: 2,
 		showPrintMargin: false,
 		wrap: true,
-		useWorker: true,
+		useWorker: false,
 		fontSize: 12,
 		showInvisibles: false,
 		behavioursEnabled: true,
@@ -26,14 +26,14 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 
 	output.setOptions({
-		mode: 'ace/mode/html',
+		mode: 'ace/mode/css',
 		theme: 'ace/theme/tomorrow_night_eighties',
 		tabSize: 2,
 		showPrintMargin: false,
 		wrap: true,
-		useWorker: true,
+		useWorker: false,
 		fontSize: 12,
-		showInvisibles: true,
+		showInvisibles: false,
 		behavioursEnabled: true,
 		useSoftTabs: true,
 		highlightActiveLine: false,
@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	var settingsBtn = document.querySelector('#action-settings');
 	var spacesBtn = document.querySelector('#action-spaces');
 	var settings = document.querySelector('#settings');
-	var langSel = document.querySelector('select[name=lang]');
 	var tabsSel = document.querySelector('select[name=tabs]');
 
 	settingsBtn.addEventListener('click', function () {
@@ -59,11 +58,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	spacesBtn.addEventListener('click', function () {
 		editor.setOption('useSoftTabs', spacesBtn.checked);
 		output.setOption('useSoftTabs', spacesBtn.checked);
-	});
-
-	langSel.addEventListener('change', function () {
-		editor.setOption('mode', 'ace/mode/' + langSel.value);
-		output.setOption('mode', 'ace/mode/' + langSel.value);
 	});
 
 	tabsSel.addEventListener('change', function () {
