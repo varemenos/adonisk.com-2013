@@ -1,5 +1,5 @@
 exports.index = function(req, res){
-	res.render('index', {title: 'Adonis K.'});
+	res.render('home/index', {title: 'Adonis K.'});
 };
 
 exports.projects = {};
