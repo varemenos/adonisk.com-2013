@@ -25,7 +25,8 @@
   "homepage": "http://tools.adonisk.com",
   "dependencies": {
     "vejstools": "0.0.0",
-    "express": "~3.4.8"
+    "express": "~3.4.8",
+    "ejs": "~0.8.5"
   },
   "devDependencies": {
     "gulp": "~3.4.0",
