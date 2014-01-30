@@ -1,0 +1,334 @@
+@import "_verepo";
+@import "_font-awesome";
+
+@include normalize;
+@include grid(12, 1rem);
+
+// $main-color: #335;
+// $main-color: #333;
+// $main-color: #58a;
+$main-color: #933;
+
+body{
+	background-color: $main-color;
+	overflow-x: auto;
+	overflow-y: scroll;
+}
+
+#wrap{
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
+header{
+	background-color: $main-color;
+}
+
+#brand{
+	display: none;
+}
+
+#brand-image{
+	float: left;
+	display: block;
+	height: 3rem;
+	width: 3rem;
+	vertical-align: bottom;
+	line-height: 1rem;
+	background-color: #333;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-image: url("http://i.imgur.com/oY2ctw0.png");
+}
+
+#navigation{
+	float: left;
+}
+
+#navigation-links{
+	float: right;
+}
+
+#navigation,
+#navigation-links{
+	display: block;
+
+	ul{
+		@include floated-list;
+
+		li{
+			a{
+				display: block;
+				padding: 1rem;
+				line-height: 1rem;
+				font-weight: bold;
+				outline: none;
+				transition: background 250ms ease-out, color 250ms ease-out;
+
+				&,
+				&:visited{
+					color: #fff;
+					text-decoration: none;
+				}
+
+				&.active{
+					color: #fff;
+					background-color: darken($main-color, 5%);
+				}
+
+				&:hover{
+					color: #f96;
+					background-color: darken($main-color, 5%);
+				}
+			}
+		}
+	}
+}
+
+#sub-navigation{
+	ul{
+		@include floated-list;
+		background-color: darken($main-color, 5%);
+
+		a{
+			display: block;
+			padding: 0.75rem;
+			font-size: 0.8rem;
+			font-weight: bold;
+			text-decoration: none;
+			outline: none;
+			transition: background 250ms ease-out, color 250ms ease-out;
+
+			&,
+			&:visited{
+				color: #fff;
+			}
+
+			&:hover{
+				color: #f96;
+				background-color: darken($main-color, 10%);
+			}
+
+			&.current{
+				background-color: darken($main-color, 10%);
+			}
+		}
+	}
+}
+
+main{
+	@include clearfix;
+}
+
+#about{
+	padding: 0 1rem;
+	background-color: #fff;
+
+	& > div{
+		margin-bottom: 1rem;
+		padding: 1rem 1rem 0 1rem;
+		background-color: #fff;
+		border: 1px solid #eee;
+		transition: background-color 250ms;
+
+		&:target{
+			background-color: #fec;
+			border-color: #ec9;
+
+			h2{
+				border-color: #ec9;
+
+				.section-anchor{
+					background-color: #ec9;
+				}
+			}
+		}
+	}
+
+	h2{
+		@include borderbox;
+		margin: 0;
+		border-bottom: 1px solid #eee;
+
+		&:hover{
+			border-color: #ddd;
+
+			.section-anchor{
+				background-color: #ddd;
+			}
+		}
+	}
+
+	.section-anchor{
+		@include borderbox;
+		display: inline-block;
+		margin-right: 1rem;
+		padding: 0.5em;
+		text-decoration: none;
+		transition: background-color 250ms;
+
+		&,
+		&:visited{
+			color: #222;
+			background-color: #eee;
+		}
+	}
+
+	ul{
+		padding-left: 1.5rem;
+
+		 li a{
+			&,
+			&:visited{
+				text-decoration: underline;
+				color: #222;
+			}
+		}
+	}
+
+	p{
+		font-family: Myriad Pro, Arial, Helvetica, Calibri, sans-serif;
+		line-height: 1.618em;
+		text-indent: 1.5rem;
+		text-align: justify;
+	}
+}
+
+#home{
+	padding: 1rem;
+	text-align: justify;
+	background-color: #fff;
+
+	h1{
+		margin-top: 0;
+	}
+}
+
+#banner{
+  height: 450px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("http://fc01.deviantart.net/fs70/f/2010/040/c/1/King_Pawnage_v2_by_AKLP.jpg");
+  background-color: $main-color;
+  position: relative;
+
+  #banner-avatar{
+    width: 100px;
+    height: 100px;
+  }
+
+  #banner-details{
+    @include media(left);
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.35) 0%,rgba(0, 0, 0, 0.65) 100%);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+
+    h1,
+    h2{
+      margin: 0;
+    }
+  }
+}
+
+#selection,
+#settings{
+	display: none;
+	padding: 1rem;
+	font-size: 0.8rem;
+	color: #fff;
+	background-color: darken($main-color, 10%);
+	border-top: 1px solid darken($main-color, 12.5%);
+
+	&.active{
+		display: block;
+	}
+
+	label{
+		display: inline-block;
+		padding: 0.5rem;
+		color: #222;
+		outline: none;
+		color: #222;
+		background-color: #fff;
+		border: none;
+	}
+
+	select{
+		color: #222;
+		outline: none;
+		color: #222;
+		background-color: #fff;
+		border: none;
+	}
+
+	button{
+		display: inline-block;
+		margin-left: 0.5rem;
+		padding: 0.5rem;
+		outline: none;
+		color: #222;
+		background-color: #fff;
+		border: none;
+		border-bottom: 2px solid #777;
+		transition: background-image 250ms ease-out;
+
+		&:hover{
+			border-bottom-width: 0;
+			@include transform(translateY(1px));
+		}
+
+		&:active{
+			@include transform(translateY(2px));
+		}
+	}
+}
+
+.editor{
+	@include borderbox;
+	position: relative;
+	float: left;
+	width: 50%;
+	padding: 1rem;
+	background-color: darken($main-color, 10%);
+	border-top: 1px solid darken($main-color, 12.5%);
+
+	#edit,
+	#output{
+		height: 350px;
+	}
+
+	&#inputEditor{
+		border-right: 1px solid darken($main-color, 12.5%);
+	}
+}
+
+.editorTitle{
+	margin: 0;
+	padding: 0 0 1rem 0;
+	line-height: 1rem;
+	font-weight: bold;
+	font-size: 1rem;
+	color: #ccc;
+}
+
+footer{
+	background-color: $main-color;
+
+	p{
+		margin: 0;
+		padding: 1rem;
+		color: white;
+		text-align: center;
+	}
+}
+
+.clearfix{
+	@include clearfix;
+}
