@@ -11,6 +11,8 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var jshint = require('gulp-jshint');
 var marked = require('gulp-marked');
+var notify = require('gulp-notify');
+var sass = require('gulp-ruby-sass');
 var nodemon = require('gulp-nodemon');
 var symlink = require('gulp-symlink');
 var htmlmin = require('gulp-htmlmin');
@@ -18,4 +20,26 @@ var filesize = require('gulp-filesize');
 var livereload = require('gulp-livereload');
 var autoprefixer = require('gulp-autoprefixer');
 
-gulp.task('default', function () { });
+gulp.task('watch', function() {
+	gulp.src('public/css/style.scss')
+		.pipe(watch())
+		.pipe(sass({
+			unixNewlines: true,
+			style: 'expanded',
+			noCache: true,
+		}))
+		.pipe(gulp.dest('.'))
+		.pipe(livereload());
+});
+
+gulp.task('sass', function() {
+	gulp.src('public/css/style.scss')
+		.pipe(sass({
+			unixNewlines: true,
+			style: 'expanded',
+			noCache: true,
+		}))
+		.pipe(gulp.dest('.'));
+});
+
+gulp.task('default', ['sass']);
