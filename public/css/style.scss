@@ -123,6 +123,7 @@ main{
 
 #about{
 	padding: 0 1rem;
+	color: #444;
 	background-color: #fff;
 
 	& > div{
@@ -144,6 +145,15 @@ main{
 				}
 			}
 		}
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6{
+		color: #222;
 	}
 
 	h2{
