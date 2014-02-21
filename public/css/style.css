@@ -1873,12 +1873,13 @@ main:after {
 
 #about {
   padding: 0 1rem;
+  color: #444;
   background-color: #fff; }
   #about > div {
     margin-bottom: 1rem;
     padding: 1rem 1rem 0 1rem;
     background-color: #fff;
-    border: 1px solid #eee;
+    border: 1px solid transparent;
     transition: background-color 250ms; }
     #about > div:target {
       background-color: #fec;
@@ -1887,6 +1888,13 @@ main:after {
         border-color: #ec9; }
         #about > div:target h2 .section-anchor {
           background-color: #ec9; }
+  #about h1,
+  #about h2,
+  #about h3,
+  #about h4,
+  #about h5,
+  #about h6 {
+    color: #222; }
   #about h2 {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;

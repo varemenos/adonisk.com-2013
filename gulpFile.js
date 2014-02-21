@@ -20,26 +20,28 @@ var filesize = require('gulp-filesize');
 var livereload = require('gulp-livereload');
 var autoprefixer = require('gulp-autoprefixer');
 
+var dir = {
+	css: 'public/css/'
+};
+
 gulp.task('watch', function() {
-	gulp.src('public/css/style.scss')
+	gulp.src(dir.css + 'style.scss')
 		.pipe(watch())
 		.pipe(sass({
 			unixNewlines: true,
-			style: 'expanded',
 			noCache: true,
 		}))
-		.pipe(gulp.dest('.'))
+		.pipe(gulp.dest(dir.css + 'style.css'))
 		.pipe(livereload());
 });
 
 gulp.task('sass', function() {
-	gulp.src('public/css/style.scss')
+	gulp.src(dir.css + 'style.scss')
 		.pipe(sass({
 			unixNewlines: true,
-			style: 'expanded',
 			noCache: true,
 		}))
-		.pipe(gulp.dest('.'));
+		.pipe(gulp.dest(dir.css));
 });
 
 gulp.task('default', ['sass']);
