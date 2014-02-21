@@ -20,11 +20,13 @@ app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(app.router);
 
-app.use(express.static(path.join(__dirname, 'public'), { maxAge: 30 * oneDay }));
 
 // development only
 if ('development' == app.get('env')) {
-  app.use(express.errorHandler());
+	app.use(express.static(path.join(__dirname, 'public')));
+	app.use(express.errorHandler());
+} else {
+	app.use(express.static(path.join(__dirname, 'public'), { maxAge: 30 * oneDay }));
 }
 
 app.get('/projects', routes.projects.index);

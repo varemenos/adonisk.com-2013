@@ -1782,7 +1782,7 @@ header {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-image: url("http://i.imgur.com/oY2ctw0.png"); }
+  background-image: url("/img/vlogo.png"); }
 
 #navigation {
   float: left; }
@@ -1942,7 +1942,7 @@ main:after {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-image: url("http://fc01.deviantart.net/fs70/f/2010/040/c/1/King_Pawnage_v2_by_AKLP.jpg");
+  background-image: url("/img/king_pawnage_v2.jpg");
   background-color: #993333;
   position: relative; }
   #banner #banner-avatar {
