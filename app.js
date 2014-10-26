@@ -2,6 +2,7 @@ var routes = require('./routes');
 var express = require('express');
 var http = require('http');
 var path = require('path');
+var staticAsset = require('static-asset');
 
 var app = express();
 
@@ -23,6 +24,7 @@ app.use(app.router);
 
 // development only
 if ('development' == app.get('env')) {
+	app.use(staticAsset(path.join(__dirname, 'public')));
 	app.use(express.static(path.join(__dirname, 'public')));
 	app.use(express.errorHandler());
 } else {
