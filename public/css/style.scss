@@ -125,7 +125,7 @@ main{
 	@include clearfix;
 }
 
-#about{
+#resume{
 	padding: 0 2rem;
 	color: #444;
 	background-color: #fff;
@@ -204,7 +204,6 @@ main{
 #home,
 #projects{
 	padding: 2rem;
-	text-align: justify;
 	background-color: #fff;
 
 	h1{
@@ -227,41 +226,71 @@ main{
 	}
 }
 
-#banner{
-  height: 450px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-image: url("/img/king_pawnage_v2.jpg");
-  background-color: $main-color;
-  position: relative;
+#home{
+	box-sizing: border-box;
+	height: 45vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url("/img/king_pawnage_v2.jpg");
+	background-color: $main-color;
+	position: relative;
+	text-align: center;
 
-  #banner-avatar{
-    width: 100px;
-    height: 100px;
-  }
-
-  #banner-details{
-    @include media(left);
-    padding: 1rem;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    color: white;
-    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.35) 0%,rgba(0, 0, 0, 0.65) 100%);
-    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.35) 0%,rgba(0, 0, 0, 0.65) 100%);
-    background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.35) 0%,rgba(0, 0, 0, 0.65) 100%);
-    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.35) 0%,rgba(0, 0, 0, 0.65) 100%);
-    background-image: linear-gradient(top, rgba(0, 0, 0, 0.35) 0%,rgba(0, 0, 0, 0.65) 100%);
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-
-    h1,
-    h2{
-      margin: 0;
-    }
-  }
+	h1{
+		box-sizing: border-box;
+		font-family: "Open Sans",serif;
+		font-weight: normal;
+		font-size: 1.5em;
+		line-height: 1em;
+		text-align: center;
+		color: #444;
+		background: rgba(255, 255, 255, 0.85);
+		padding: 1.5em;
+		display: inline-block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: 0;
+		transform: translateX(-50%) translateY(-50%);
+	}
 }
+
+// #banner{
+//   height: 450px;
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   background-position: center center;
+//   background-image: url("/img/king_pawnage_v2.jpg");
+//   background-color: $main-color;
+//   position: relative;
+
+//   #banner-avatar{
+//     width: 100px;
+//     height: 100px;
+//   }
+
+//   #banner-details{
+//     @include media(left);
+//     padding: 1rem;
+//     position: absolute;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//     color: white;
+//     background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.35) 0%,rgba(0, 0, 0, 0.65) 100%);
+//     background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.35) 0%,rgba(0, 0, 0, 0.65) 100%);
+//     background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.35) 0%,rgba(0, 0, 0, 0.65) 100%);
+//     background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.35) 0%,rgba(0, 0, 0, 0.65) 100%);
+//     background-image: linear-gradient(top, rgba(0, 0, 0, 0.35) 0%,rgba(0, 0, 0, 0.65) 100%);
+//     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+
+//     h1,
+//     h2{
+//       margin: 0;
+//     }
+//   }
+// }
 
 #selection,
 #settings{

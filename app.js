@@ -33,7 +33,7 @@ if (app.get('env') != 'development') {
 
 app.get('/projects', routes.projects.index);
 
-app.get('/gallery', routes.gallery.index);
+// app.get('/gallery', routes.gallery.index);
 
 app.get('/tools/formatter', routes.tools.formatter);
 app.get('/tools/prefixer', routes.tools.prefixer);
@@ -43,7 +43,7 @@ app.get('/tools/url', routes.tools.url);
 app.get('/tools/color', routes.tools.color);
 app.get('/tools', routes.tools.index);
 
-app.get('/about', routes.about.index);
+app.get('/resume', routes.resume.index);
 
 app.get('/contact', routes.contact.index);
 
