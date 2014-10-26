@@ -1,3 +1,15 @@
 			<footer>
 				<p>Adonis K. &copy; 2014</p>
 			</footer>
+
+			<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+			<script>
+				$(function () {
+					// add active class to the currently viewed page
+					$("#navigation a, #sub-navigation a").each(function (i, item) {
+						if(window.location.pathname.indexOf($(item).attr("href")) > -1) {
+							$(item).addClass('active');
+						}
+					});
+				});
+			</script>

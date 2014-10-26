@@ -8,7 +8,6 @@ var app = express();
 
 var oneDay = 86400000;
 
-// all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -21,15 +20,15 @@ app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(app.router);
 
+// server and cache public assets
+app.use(staticAsset(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public'), {
+	maxAge: 30 * oneDay
+}));
 
-// development only
-if ('development' == app.get('env')) {
-    app.use(staticAsset(path.join(__dirname, 'public')));
-    app.use(express.static(path.join(__dirname, 'public'), { maxAge: 30 * oneDay }));
-    app.use(express.errorHandler());
-} else {
-	app.use(staticAsset(path.join(__dirname, 'public')));
-	app.use(express.static(path.join(__dirname, 'public'), { maxAge: 30 * oneDay }));
+// production only
+if (app.get('env') != 'development') {
+	app.use(express.errorHandler());
 }
 
 app.get('/projects', routes.projects.index);
@@ -48,8 +47,12 @@ app.get('/about', routes.about.index);
 
 app.get('/contact', routes.contact.index);
 
-app.get('/', routes.index);
+app.get('/home', routes.index);
 
-http.createServer(app).listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'));
+app.get('/', function (req, res) {
+	res.redirect('/home');
+});
+
+http.createServer(app).listen(app.get('port'), function () {
+	console.log('Express server listening on port ' + app.get('port'));
 });
