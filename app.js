@@ -24,10 +24,11 @@ app.use(app.router);
 
 // development only
 if ('development' == app.get('env')) {
-	app.use(staticAsset(path.join(__dirname, 'public')));
-	app.use(express.static(path.join(__dirname, 'public')));
-	app.use(express.errorHandler());
+    app.use(staticAsset(path.join(__dirname, 'public')));
+    app.use(express.static(path.join(__dirname, 'public'), { maxAge: 30 * oneDay }));
+    app.use(express.errorHandler());
 } else {
+	app.use(staticAsset(path.join(__dirname, 'public')));
 	app.use(express.static(path.join(__dirname, 'public'), { maxAge: 30 * oneDay }));
 }
 

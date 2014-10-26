@@ -17,7 +17,7 @@ exports.gallery.index = function(req, res){
 exports.tools = {};
 
 exports.tools.index = function(req, res){
-	res.render('tools/formatter', {title: 'Adonis K. > Tools'});
+	res.render('tools/wip', {title: 'Adonis K. > Tools'});
 };
 
 	exports.tools.formatter = function(req, res){

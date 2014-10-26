@@ -15,6 +15,11 @@ body{
 	overflow-y: scroll;
 }
 
+h1{
+	margin: 2rem 0;
+	text-transform: uppercase;
+}
+
 #wrap{
 	max-width: 1140px;
 	margin: 0 auto;
@@ -122,13 +127,12 @@ main{
 }
 
 #about{
-	padding: 0 1rem;
+	padding: 0 2rem;
 	color: #444;
 	background-color: #fff;
 
 	& > div{
-		margin-bottom: 1rem;
-		padding: 1rem 1rem 0 1rem;
+		padding: 0 0 2rem 0;
 		background-color: #fff;
 		border: 1px solid transparent;
 		transition: background-color 250ms;
@@ -206,7 +210,7 @@ main{
 }
 
 #home{
-	padding: 1rem;
+	padding: 2rem;
 	text-align: justify;
 	background-color: #fff;
 
