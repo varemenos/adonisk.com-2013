@@ -1,6 +1,6 @@
 {
 	"name": "adonisk.com",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "adonisk.com",
 	"main": "app.js",
 	"postinstall": "node_modules/.bin/bower install",
