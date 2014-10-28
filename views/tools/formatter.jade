@@ -1,0 +1,50 @@
+extends ../layout
+block header
+	include ../partials/header
+block content
+	include subheader
+	main#tool
+		#selection.active
+			label
+				select(name="lang")
+					option(value="html")
+						| HTML
+					option(value="css")
+						| CSS
+					option(value="scss")
+						| SCSS
+					option(value="javascript")
+						| JavaScript
+			button#action-settings
+				i.fa.fa-cog
+				|  Settings
+			button#action-minify
+				i.fa.fa-compress
+				|  Minify
+			button#action-prettify
+				i.fa.fa-expand
+				|  Prettify
+		#settings
+			label
+				| Use Spaces
+				input#action-spaces(type="checkbox", checked)
+			label
+				select(name="tabs")
+					option(value="2")
+						| Tab Size: 2px
+					option(value="4")
+						| Tab Size: 4px
+					option(value="8")
+						| Tab Size: 8px
+		#inputEditor.editor
+			h4.editorTitle
+				| Input
+			#edit
+		#outputEditor.editor
+			h4.editorTitle
+				| Output
+			#output
+block footer
+	include ../partials/footer
+	script(src="/js/ace/ace.js")
+	script(src="/js/tools/formatter.js")

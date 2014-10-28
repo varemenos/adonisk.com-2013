@@ -1,0 +1,42 @@
+extends ../layout
+block header
+	include ../partials/header
+block content
+	//- include subheader
+	main#projects
+		h1
+			| Projects
+		h2
+			a(href="#codemagic")
+			| Codemagic
+		p
+			| Codemagic.gr is a powerful online code editor for web development! It's open-source and it follows the philosophy of client-side and fast execution. It's built for creative people who do a lot of web-related experiments and want to test stuff in real-time without the hassle of preparing project files and whatnot. It is also a great place for people to come and learn various web-technologies like HTML, CSS, JS and their derivatives.
+		p
+			a(href="http://codemagic.gr")
+				| [site]
+			| ,&nbsp;
+			a(href="https://github.com/varemenos/codemagic")
+				| [source]
+
+		h2
+			a(href="#verepo")
+			| veRepo
+		p
+			| veRepo is an open source SASS library of modules and mixins for robust and maintainable front-end development using SASS. Most of the modular items/objects in this repo will work by just adding 1 class name to the html element you desire to style (although there are some exceptions).
+		p
+			a(href="http://varemenos.github.io/verepo")
+				| [site]
+			| ,&nbsp;
+			a(href="https://github.com/varemenos/verepo")
+				| [source]
+			| ,&nbsp;
+			a(href="http://varemenos.github.io/verepo/docs/")
+				| [documentation]
+		h2
+			| More
+		p
+			| There are more unlisted public projects in my&nbsp;
+			a(href="https://github.com/varemenos")
+				| github account
+block footer
+	include ../partials/footer
