@@ -2,7 +2,6 @@ var routes = require('./routes');
 var express = require('express');
 var http = require('http');
 var path = require('path');
-var staticAsset = require('static-asset');
 
 var app = express();
 
@@ -20,13 +19,12 @@ app.use(express.methodOverride());
 app.use(app.router);
 
 // server and cache public assets
-app.use(staticAsset(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public'), {
 	maxAge: 30 * oneDay
 }));
 
 // production only
-if (app.get('env') != 'development') {
+if (app.get('env') === 'development') {
 	app.use(express.errorHandler());
 }
 
