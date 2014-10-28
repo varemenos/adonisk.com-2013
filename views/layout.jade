@@ -1,0 +1,15 @@
+doctype html
+html(lang="en")
+    title
+        | #{title}
+    style.
+        header a { color: #fff; text-decoration: none; }
+    link(rel='stylesheet', href='/css/style.css')
+    script(src="//use.typekit.net/jyy4cgv.js")
+    script.
+        try{Typekit.load();}catch(e){}
+    body#top
+        #wrap
+            block header
+            block content
+            block footer

@@ -1,0 +1,36 @@
+extends ../layout
+block header
+	include ../partials/header
+block content
+	include subheader
+	main#tool
+		#selection.active
+			button#action-settings
+				i.fa.fa-cog
+					|  Settings
+			button#action-prettify
+				i.fa.fa-play
+					|  Prefix
+		#settings
+			label
+				| Use Spaces
+				input#action-spaces(type="checkbox", checked)
+				select(name="tabs")
+					option(value="2")
+						| Tab Size: 2px
+					option(value="4")
+						| Tab Size: 4px
+					option(value="8")
+						| Tab Size: 8px
+		#inputEditor.editor
+			h4.editorTitle
+				| Input
+			#edit
+		#outputEditor.editor
+			h4.editorTitle
+				| Output
+			#output
+block footer
+	include ../partials/footer
+	script(src="/js/ace/ace.js")
+	script(src="/js/tools/prefixer.js")

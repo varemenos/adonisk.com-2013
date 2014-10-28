@@ -1,0 +1,218 @@
+extends ../layout
+block header
+	include ../partials/header
+block content
+	main#resume
+		h1
+			| Resume
+		#titles
+			h2
+				a(href="#titles")
+				| Title(s)
+			ul
+				li
+					| Front-end Web Developer
+				li
+					| Junior Software Engineer
+				li
+					| Digital Artist
+		#skills-and-expertise
+			h2
+				a(href="#skills-and-expertise")
+				| Skills &amp; Expertise
+			ul
+				li
+					h3
+						| Me
+					ul
+						li
+							| Quick study and eager to learn
+						li
+							| Dedicated to my work
+						li
+							| My job is my main hobby, so working is a fun activity
+						li
+							| Knowledgeable about various computer technology topics, be it the hardware, software, networking etc.
+				li
+					h3
+						| Web Technologies
+					ul
+						li
+							| Exceptional HTML5 and CSS (also SASS) knowledge.
+						li
+							| Strong JavaScript, AJAX, JQuery, JSON and Node.js knowledge.
+						li
+							| Strong Apache2, PHP and MySQL knowledge.
+						li
+							| Excellent debugging, UX and responsive design skills.
+						li
+							| "Photoshop Veteran", with more than 8 years of experience.
+						li
+							| Well informed about any new web-development trends, technology advances and various other topics related to my work.
+						li
+							| Wordpress and PhpBB3 customization (themes, plugins etc)
+				li
+					h3
+						| Other
+					ul
+						li
+							| Git &amp; GitHub.
+						li
+							| Mobile web-development.
+						li
+							| Cross browser support.
+						li
+							| Able to do Accessibility work.
+						li
+							| Search engine friendly.
+						li
+							| Print Media (logos, banners, posters etc).
+						li
+							| Photo &amp; Video Manipulation.
+						li
+							| Social Media.
+						li
+							| Consulting.
+		#experience
+			h2
+				a(href="#experience")
+				| Experience
+			ul
+				li
+					h3
+						| Front-end Web Developer at Goodvidio
+					h4
+						| April 2014 - Present
+					p
+						a(href="http://goodvid.io")
+							| [site]
+				li
+					h3
+						| Freelance and Volunteer
+					h4
+						| 2008 - 2013
+					p
+						| In the past I also did a lot of freelance work and supported communities by either creating their website/forum or by supporting them with maintaining their linux servers.
+
+		#education
+			h2
+				a(href="#education")
+				| Education
+			ul
+				li
+					h3
+						| Bachelor of Software Engineering (B.SE.) at the Technological Educational Institute of Central Greece.
+					//- h4
+					//-     | Courses:
+					//- ul
+					//-     li
+					//-         | Linear Algebra (A1)
+					//-     li
+					//-         | Maths I (A2)
+					//-     li
+					//-         | Electronic Physics (A3)
+					//-     li
+					//-         | Physics (A4)
+					//-     li
+					//-         | Programming | (C) (A5)
+					//-     li
+					//-         | Introduction to Computer Systems (A6)
+					//-     li
+					//-         | Maths || (B1)
+					//-     li
+					//-         | Discrete Maths (B2)
+					//-     li
+					//-         | Computer Architecture | (B3)
+					//-     li
+					//-         | Programming || (Java) (B4)
+					//-     li
+					//-         | Digital Systems | (B5)
+					//-     li
+					//-         | Data Structures (C) (B6)
+					//-     li
+					//-         | Computer Architecture || (C1)
+					//-     li
+					//-         | Probability, Statistics (C2)
+					//-     li
+					//-         | English Computer Terminology (C3)
+					//-     li
+					//-         | Digital Systems || (C4)
+					//-     li
+					//-         | Creation and Analysis of Algorithms (C5)
+					//-     li
+					//-         | Programming ||| (Java) (C6)
+					//-     li
+					//-         | Operating Systems (D1)
+					//-     li
+					//-         | Linear systems, Linear transformations (D2)
+					//-     li
+					//-         | Databases (D3)
+					//-     li
+					//-         | Data Networks | (D4)
+					//-     li
+					//-         | Introduction to Philosophy (D5)
+					//-     li
+					//-         | Business Research (D6)
+					//-     li
+					//-         | Artificial Inteligence (E1)
+					//-     li
+					//-         | Micro-Controllers, Micro-Processors (E2)
+					//-     li
+					//-         | Software Engineering (E3)
+					//-     li
+					//-         | Digital Signal Processing (E4)
+					//-     li
+					//-         | Data Networks || (E5)
+					//-     li
+					//-         | Distributed Systems (F1)
+					//-     li
+					//-         | Security and Data Protection (F2)
+					//-     li
+					//-         | Telecommunications (F3)
+					//-     li
+					//-         | Automatic Control Systems (A.C.S.) (F4)
+					//-     li
+					//-         | Large Scale Integrated Circuits (F6)
+					//-     li
+					//-         | Computer network designing (G1)
+					//-     li
+					//-         | E-Commerce and Web Technologies (G2)
+					//-     li
+					//-         | Digital Image Processing (G3)
+					//-     li
+					//-         | Special Topics of Distributed Systems (G4)
+					//-     li
+					//-         | Information Systems (G5)
+				li
+					h3
+						| Democritus Technological Highschool of Thessaloniki, Greece.
+					//- h4
+					//-     | Courses:
+					//- p
+					//-     | Programming, Introduction to Software Engineering, Computer Hardware, Network Engineering, Network Management and more
+		#languages
+			h2
+				a(href="#languages")
+				| Languages
+			ul
+				li
+					| Greek (Native)
+				li
+					| English (Proficient)
+		#personal-details
+			h2
+				a(href="#personal-details")
+				| Personal Details
+			ul
+				li
+					| Full Name: Kakoulidis Adonis
+				li
+					| Current Location: Thessaloniki, Greece
+				li
+					| Date of Birth: 23/02/1989
+block footer
+	include ../partials/footer
+		button#scroll2top(title="Scroll to top")
+			| Scroll to top&nbsp;
+			i.fa.fa-angle-up
+		script(src="/js/views/resume.js")
