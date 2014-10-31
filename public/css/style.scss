@@ -271,9 +271,14 @@ main{
 		display: block;
 	}
 
+	button,
+	label{
+		margin-right: 0.5rem;
+	}
+
 	label{
 		display: inline-block;
-		padding: 0.5rem;
+		padding: 0.45rem;
 		color: #222;
 		outline: none;
 		color: #222;
@@ -291,23 +296,24 @@ main{
 
 	button{
 		display: inline-block;
-		margin-left: 0.5rem;
 		padding: 0.5rem;
 		outline: none;
 		color: #222;
 		background-color: #fff;
 		border: none;
-		border-bottom: 2px solid #777;
 		transition: background-image 250ms ease-out;
 
 		&:hover{
-			border-bottom-width: 0;
-			transform: translateY(1px);
+			background-color: darken(#fff, 10%);
 		}
 
 		&:active{
-			transform: translateY(2px);
+			background-color: darken(#fff, 20%);
 		}
+	}
+
+	input[type="checkbox"]{
+		vertical-align: middle;
 	}
 }
 

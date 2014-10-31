@@ -23,6 +23,7 @@
   "dependencies": {
     "verepo": "~0.0.2",
     "font-awesome": "~4.2.0",
-    "jquery": "~2.1.1"
+    "jquery": "~2.1.1",
+    "js-beautify": "~1.5.4"
   }
 }
