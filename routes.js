@@ -25,9 +25,9 @@ exports.tools.index = function (req, res) {
 	});
 };
 
-exports.tools.formatter = function (req, res) {
-	res.render('tools/formatter', {
-		title: 'Code Formatter | Adonis K.'
+exports.tools.prettify = function (req, res) {
+	res.render('tools/prettify', {
+		title: 'Prettify | Adonis K.'
 	});
 };
 
