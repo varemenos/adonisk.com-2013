@@ -1,14 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
-	var encode = function () {
-		var obj = document.getElementById('dencoder');
-		var unencoded = obj.value;
-		obj.value = encodeURIComponent(unencoded).replace(/'/g, '%27').replace(/"/g, '%22');
+	var encode = function (decoded) {
+		return encodeURIComponent(decoded).replace(/'/g, '%27').replace(/"/g, '%22');
 	};
 
-	var decode = function () {
-		var obj = document.getElementById('dencoder');
-		var encoded = obj.value;
-		obj.value = decodeURIComponent(encoded.replace(/\+/g, ' '));
+	var decode = function (encoded) {
+		return decodeURIComponent(encoded.replace(/\+/g, ' '));
 	};
 
 	var editor = ace.edit('edit');
