@@ -32,7 +32,7 @@ app.get('/projects', routes.projects.index);
 
 // app.get('/gallery', routes.gallery.index);
 
-app.get('/tools/formatter', routes.tools.formatter);
+app.get('/tools/prettify', routes.tools.prettify);
 app.get('/tools/prefixer', routes.tools.prefixer);
 app.get('/tools/base64', routes.tools.base64);
 app.get('/tools/unicode', routes.tools.unicode);
