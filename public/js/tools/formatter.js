@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	var settingsBtn = document.querySelector('#action-settings');
 	var spacesBtn = document.querySelector('#action-spaces');
-	var minifyBtn = document.querySelector('#action-minify');
 	var prettifyBtn = document.querySelector('#action-prettify');
 	var settings = document.querySelector('#settings');
 	var langSel = document.querySelector('select[name=lang]');
