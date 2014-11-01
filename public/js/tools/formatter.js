@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		wrap: true,
 		useWorker: true,
 		fontSize: 12,
-		showInvisibles: true,
+		showInvisibles: false,
 		behavioursEnabled: true,
 		useSoftTabs: true,
 		highlightActiveLine: false,
@@ -44,6 +44,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	var settingsBtn = document.querySelector('#action-settings');
 	var spacesBtn = document.querySelector('#action-spaces');
+	var minifyBtn = document.querySelector('#action-minify');
+	var prettifyBtn = document.querySelector('#action-prettify');
 	var settings = document.querySelector('#settings');
 	var langSel = document.querySelector('select[name=lang]');
 	var tabsSel = document.querySelector('select[name=tabs]');
@@ -69,5 +71,39 @@ document.addEventListener('DOMContentLoaded', function () {
 	tabsSel.addEventListener('change', function () {
 		editor.setOption('tabSize', tabsSel.value);
 		output.setOption('tabSize', tabsSel.value);
+	});
+
+	prettifyBtn.addEventListener('click', function () {
+		var code = editor.getValue();
+		var result;
+		if (langSel.value === 'js') {
+			try {
+				result = js_beautify(code);
+			} catch (e) {
+				console.log(e);
+			}
+		} else if (langSel.value === 'javascript') {
+			try {
+				result = js_beautify(code);
+			} catch (e) {
+				console.log(e);
+			}
+		} else if (langSel.value === 'html') {
+			try {
+				result = html_beautify(code);
+			} catch (e) {
+				console.log(e);
+			}
+		} else if (langSel.value === 'css') {
+			try {
+				result = css_beautify(code);
+			} catch (e) {
+				console.log(e);
+			}
+		} else {
+			throw new Error('Unsupported or invalid language selected');
+		}
+
+		output.setValue(result);
 	});
 });
