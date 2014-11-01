@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 	var editor = ace.edit('edit');
 	var output = ace.edit('output');
-	var Crypto = require('../libs/cryptojs/cryptojs.js');
 
 	editor.setOptions({
 		mode: 'ace/mode/text',
