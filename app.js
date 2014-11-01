@@ -35,7 +35,6 @@ app.get('/projects', routes.projects.index);
 app.get('/tools/prettify', routes.tools.prettify);
 app.get('/tools/prefixer', routes.tools.prefixer);
 app.get('/tools/base64', routes.tools.base64);
-app.get('/tools/unicode', routes.tools.unicode);
 app.get('/tools/url', routes.tools.url);
 app.get('/tools/color', routes.tools.color);
 app.get('/tools', routes.tools.index);

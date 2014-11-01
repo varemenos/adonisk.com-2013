@@ -43,12 +43,6 @@ exports.tools.base64 = function (req, res) {
 	});
 };
 
-exports.tools.unicode = function (req, res) {
-	res.render('tools/unicode', {
-		title: 'Unicode Decoder | Adonis K.'
-	});
-};
-
 exports.tools.url = function (req, res) {
 	res.render('tools/url', {
 		title: 'Url Decoder | Adonis K.'
