@@ -70,5 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 
 		output.setValue(prefixed, 1);
+		editor.clearSelection();
+		output.clearSelection();
 	});
 });

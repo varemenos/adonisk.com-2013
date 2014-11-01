@@ -66,6 +66,8 @@ document.addEventListener('DOMContentLoaded', function () {
 		var encoded = btoa(decoded);
 
 		output.setValue(encoded, 1);
+		editor.clearSelection();
+		output.clearSelection();
 	});
 
 	decodeBtn.addEventListener('click', function () {
@@ -73,5 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		var decoded = atob(encoded);
 
 		output.setValue(decoded, 1);
+		editor.clearSelection();
+		output.clearSelection();
 	});
 });

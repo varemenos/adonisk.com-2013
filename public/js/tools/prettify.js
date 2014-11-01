@@ -2,12 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	var editor = ace.edit('edit');
 	var output = ace.edit('output');
 
-	editor.setValue('<ul><li><a href="#" class="current">Code Formatter</a></li><li><a href="#">Base64 Converter</a></li><li><a href="#">Unicode Converter</a></li></ul>');
-	output.setValue('<ul>\n  <li><a href="#" class="current">Code Formatter</a></li>\n  <li><a href="#">Base64 Converter</a></li>\n  <li><a href="#">Unicode Converter</a></li>\n</ul>');
-
-	editor.clearSelection();
-	output.clearSelection();
-
 	editor.setOptions({
 		mode: 'ace/mode/html',
 		theme: 'ace/theme/tomorrow_night_eighties',
@@ -104,5 +98,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 
 		output.setValue(result);
+		editor.clearSelection();
+		output.clearSelection();
 	});
 });
