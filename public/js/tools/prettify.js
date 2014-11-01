@@ -43,13 +43,13 @@ document.addEventListener('DOMContentLoaded', function () {
 	var langSel = document.querySelector('select[name=lang]');
 	var tabsSel = document.querySelector('select[name=tabs]');
 
-	settingsBtn.addEventListener('click', function () {
-		if (settings.classList.contains('active')) {
-			settings.classList.remove('active');
-		} else {
-			settings.classList.add('active');
-		}
-	});
+	// settingsBtn.addEventListener('click', function () {
+	// 	if (settings.classList.contains('active')) {
+	// 		settings.classList.remove('active');
+	// 	} else {
+	// 		settings.classList.add('active');
+	// 	}
+	// });
 
 	spacesBtn.addEventListener('click', function () {
 		editor.setOption('useSoftTabs', spacesBtn.checked);
