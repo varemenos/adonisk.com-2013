@@ -39,19 +39,19 @@ exports.tools.prefixer = function (req, res) {
 
 exports.tools.base64 = function (req, res) {
 	res.render('tools/base64', {
-		title: 'Base64 Coder | Adonis K.'
+		title: 'Base64 Decoder | Adonis K.'
 	});
 };
 
 exports.tools.unicode = function (req, res) {
 	res.render('tools/unicode', {
-		title: 'Unicode Coder | Adonis K.'
+		title: 'Unicode Decoder | Adonis K.'
 	});
 };
 
 exports.tools.url = function (req, res) {
 	res.render('tools/url', {
-		title: 'Url Coder | Adonis K.'
+		title: 'Url Decoder | Adonis K.'
 	});
 };
 
