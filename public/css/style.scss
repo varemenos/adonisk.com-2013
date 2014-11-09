@@ -160,6 +160,10 @@ main{
 				background-color: #ec9;
 			}
 		}
+
+		&:last-child{
+			padding-bottom: 0;
+		}
 	}
 
 	ul{
