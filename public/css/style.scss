@@ -272,12 +272,24 @@ main{
 	border-top: 1px solid darken($main-color, 12.5%);
 
 	&.active{
-		display: block;
+		display: flex;
 	}
 
 	button,
-	label{
+	label,
+	input,
+	a{
 		margin-right: 0.5rem;
+
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+
+	input{
+		flex-grow: 1;
+		padding: 0 0.5rem;
+		border: none;
 	}
 
 	label{
@@ -298,6 +310,7 @@ main{
 		border: none;
 	}
 
+	a,
 	button{
 		display: inline-block;
 		padding: 0.5rem;
