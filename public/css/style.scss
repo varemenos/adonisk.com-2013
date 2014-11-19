@@ -42,11 +42,11 @@ header{
 	text-rendering: optimizeLegibility;
 }
 
-#brand{
+.brand{
 	display: none;
 }
 
-#brand-image{
+.brand-image{
 	display: block;
 	height: 3rem;
 	width: 3rem;
@@ -230,7 +230,7 @@ main{
 		display: block;
 	}
 
-	h1{
+	#hero{
 		box-sizing: border-box;
 		position: absolute;
 		display: block;
