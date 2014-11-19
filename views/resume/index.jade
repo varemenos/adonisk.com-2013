@@ -6,12 +6,34 @@ block content
 	main#resume
 		h1
 			| Resume
+		#introduction(itemscope, itemtype="http://schema.org/Person", style="padding-bottom: 0")
+				h2
+					| Introduction
+				div(itemprop="description")
+					p
+						| My name is
+						span(itemprop="name")
+							|  Adonis Kakoulidis
+						|  and I am a Web Developer from
+						span(itemprop="address", itemscope, itemtype="http://schema.org/PostalAddress")
+							span(itemprop="addressLocality")
+									|  Thessaloniki
+							|,
+							span(itemprop="addressCountry")
+								|  Greece
+						|.
+						br
+						| I specialize in Front-end Web Development with a focus on clean and efficient (S)CSS and JavaScript code with over 6 years of experience. I've studied Software Engineering at the Technological Institute of Central Greece and my tools of trade consist of a text editor (Sublime Text 3), a Linux Distro (usually ArchLinux), a terminal emulator, various CLI tools, SSH, Adobe Photoshop and more.
+					p
+						| In my free time, I usually try to use my imagination and creativity into creating stuff with CSS and JavaScript in codepen or codemagic. I also author technical posts at my blog (aklp.gr) and work on new and exciting open source side-projects. Once in a while I do consulting and debugging for other fellow developers who ask for my assistance.
+					p
+						| In the past I did a lot of digital artwork using tools like Adobe Photoshop, Inkscape, Adobe After Effects and Cinema4D.
 		#titles
 			h2
 				a(href="#titles")
 				| Title(s)
 			ul
-				li
+				li(itemprop="jobtitle")
 					| Front-end Web Developer
 				li
 					| Junior Software Engineer
@@ -81,7 +103,10 @@ block content
 			ul
 				li
 					h3
-						| Front-end Web Developer at Goodvidio
+						| Front-end Web Developer at
+						span(itemscope, itemtype="http://schema.org/Organization")
+							span(itemprop="name")
+								|  Goodvidio
 					h4
 						| April 2014 - Present
 					p
@@ -102,7 +127,7 @@ block content
 			ul
 				li
 					h3
-						| Bachelor of Software Engineering (B.SE.) at the Technological Educational Institute of Central Greece.
+						| Bachelor of Science (B.Sc.), Software Engineering at the Technological Educational Institute of Central Greece.
 					//- h4
 					//-     | Courses:
 					//- ul
