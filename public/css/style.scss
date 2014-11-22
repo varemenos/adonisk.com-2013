@@ -50,9 +50,10 @@ header{
 		width: 100%;
 		transition: right 500ms;
 
-		&.opened{
-			right: 0%;
-		}
+	}
+
+	&.opened{
+		right: 0%;
 	}
 }
 
