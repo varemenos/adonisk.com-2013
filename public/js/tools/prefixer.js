@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				cascade: false
 			}).process(css).css;
 		} catch (e) {
-			if (e.reason){
+			if (e.reason) {
 				prefixed = e.reason + ' at line ' + e.line;
 			} else {
 				prefixed = e.message;
