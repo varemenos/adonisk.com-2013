@@ -20,7 +20,7 @@ exports.gallery.index = function (req, res) {
 
 exports.tools = {};
 exports.tools.index = function (req, res) {
-	res.render('tools/wip', {
+	res.render('tools/index', {
 		title: 'Tools | Adonis K.'
 	});
 };
