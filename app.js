@@ -45,9 +45,9 @@ app.get('/tools/color', routes.tools.color);
 app.get('/tools', routes.tools.index);
 app.get('/resume', routes.resume.index);
 app.get('/contact', routes.contact.index);
-app.get('/home', routes.index);
-app.get('/', function (req, res) {
-	res.redirect('/home');
+app.get('/', routes.index);
+app.get('/home', function (req, res) {
+	res.redirect('/');
 });
 
 http.createServer(app).listen(app.get('port'), function () {
