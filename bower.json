@@ -1,15 +1,12 @@
 {
-  "name": "tools.adonisk.com",
+  "name": "adonisk.com",
   "version": "0.0.0",
-  "homepage": "http://tools.adonisk.com",
+  "homepage": "http://adonisk.com",
   "authors": [
     "Adonis K. <aklp08@gmail.com>"
   ],
   "keywords": [
-    "vejstools",
-    "tools.adonisk.com",
-    "adonisk",
-    "varemenos"
+    "adonisk"
   ],
   "license": "MIT",
   "private": true,
@@ -22,8 +19,8 @@
   ],
   "dependencies": {
     "verepo": "~0.0.2",
-    "font-awesome": "~4.2.0",
+    "font-awesome": "~4.3.0",
     "jquery": "~2.1.1",
-    "js-beautify": "~1.5.4"
+    "js-beautify": "~1.5.5"
   }
 }
