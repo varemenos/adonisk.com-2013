@@ -15,7 +15,8 @@ module.exports = function (grunt) {
 		'shell',
 		'sass',
 		'autoprefixer',
-		'uglify'
+		'uglify',
+		'imagemin'
 	]);
 	grunt.registerTask('default', ['watch']);
 };
