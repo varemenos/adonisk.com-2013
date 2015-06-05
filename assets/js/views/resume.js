@@ -1,8 +1,3 @@
-$(function () {
-	scroll2top();
-	// stickyHeader();
-});
-
 var stickyHeader = function () {
 	var applyStick = function (el) {
 		var top = $(window).scrollTop();
@@ -45,3 +40,8 @@ var scroll2top = function () {
 		applyScroll(el);
 	});
 };
+
+$(function () {
+	scroll2top();
+	// stickyHeader();
+});
